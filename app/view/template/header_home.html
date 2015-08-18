@@ -1,0 +1,88 @@
+<div class="header">
+      <div class="head-bg">
+        <!-- container -->
+        <div class="container">
+          <div class="head-logo">
+            <a href="index.html"><img src="{$basedomain}assets/images/logo-pondok-guru-bakti.png" alt="" /></a>
+          </div>
+          <div class="top-nav">
+            <span class="menu"><img src="{$basedomain}assets/images/menu.png" alt=""></span>
+              <ul class="cl-effect-1">
+                <li><a href="{$basedomain}">Beranda</a></li>                                             
+                <li><a href="{$basedomain}profil">Tentang Kami</a></li>
+                <li><a href="{$basedomain}booking">Booking Kamar</a></li> 
+                <li><a href="{$basedomain}berita">Berita</a></li> 
+                <li><a href="{$basedomain}kontak">Kontak</a></li>  
+              </ul>
+              <!-- script-for-menu -->
+               <script>
+
+    {literal}
+                 $( "span.menu" ).click(function() {
+                 $( "ul.cl-effect-1" ).slideToggle( 300, function() {
+                 // Animation complete.
+                  });
+                 });
+
+    {/literal}
+              </script>
+            <!-- /script-for-menu -->
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <!-- //container -->
+      </div>
+      <!-- container -->
+      <div class="container">
+        <!-- banner Slider starts Here -->
+          <script src="{$basedomain}assets/js/responsiveslides.min.js"></script>
+           <script>
+
+    {literal}
+            $(function () {
+              // Slideshow 4
+              $("#slider3").responsiveSlides({
+              auto: true,
+              pager: false,
+              nav: false,
+              speed: 500,
+              namespace: "callbacks",
+              before: function () {
+                $('.events').append("<li>before event fired.</li>");
+              },
+              after: function () {
+                $('.events').append("<li>after event fired.</li>");
+              }
+              });
+          
+            });
+
+    {/literal}
+            </script>
+          <!--//End-slider-script -->
+          <div  id="top" class="callbacks_container">
+            <ul class="rslides" id="slider3">
+              <li>
+                <div class="head-info">
+                  <h1> Pondok<span>Guru Bakti</span></h1>
+                  <p>Sollicitudin et elit sit amet, luctus placerat ipsum</p>
+                </div>
+              </li>
+              <!--<li>
+                <div class="head-info">
+                  <h1>Aenean suscipit<span>Suspendisse venenatis volutpat </span></h1>
+                  <p>Morbi id felis porttitor tellus viverra pulvinar. Vestibulum </p>
+                </div>
+              </li>
+              <li>
+                <div class="head-info">
+                  <h1>Gestas vulputate<span>Morbi id felis porttitor tellus</span></h1>
+                  <p>Morbi id felis porttitor tellus viverra pulvinar.ante ipsum </p>
+                </div>
+              </li>-->
+            </ul>
+          </div>
+
+      </div>
+      <!-- container -->
+    </div>

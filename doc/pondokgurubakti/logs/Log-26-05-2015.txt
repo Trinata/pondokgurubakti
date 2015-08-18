@@ -1,0 +1,10 @@
+SELECT * FROM banksoal  WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 1 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT * FROM banksoal  WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 1 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT * FROM banksoal  WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 1 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT * FROM banksoal  WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 1 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT * FROM banksoal  WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 1 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  

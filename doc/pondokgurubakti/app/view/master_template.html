@@ -1,0 +1,19 @@
+  
+{include file="template/meta.html"}
+	
+    <!-- HEADER DEFAULT -->
+    {if $page.page=="home"}
+
+    	{include file="template/header_home.html"}
+    {else}
+
+    	{include file="template/header.html"}
+    {/if}
+    
+
+    <!-- CONTENT -->
+
+	{$content}
+
+	<!-- FOOTER -->
+    {include file="template/footer.html"}

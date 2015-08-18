@@ -1,0 +1,60 @@
+SELECT * FROM user WHERE  username = 'admin' AND n_status = 1   LIMIT 1
+SELECT * FROM user WHERE  username = 'bayu' AND n_status = 1   LIMIT 1
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT * FROM banksoal WHERE   idSoal = 2 AND n_status = 1  
+SELECT * FROM banksoal WHERE   idSoal = 2 AND n_status = 1  
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT * FROM banksoal WHERE   idSoal = 2 AND n_status = 1  
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
+SELECT idSoal FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY RAND()  
+SELECT id, start_date, end_date FROM tbl_generate_soal WHERE   idKursus = 1 AND idMateri = 1 AND finish = 0 AND idUser = 8 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT soal FROM tbl_generate_soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1 ORDER BY id DESC LIMIT 1  
+SELECT * FROM banksoal WHERE   idKursus = 1 AND idMateri = 1 AND n_status = 1   
+SELECT idSoal, jawabanuser FROM soal WHERE   idUser = 8 AND idKursus = 1 AND idMateri = 1 AND n_status = 1  
