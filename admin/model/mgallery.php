@@ -5,7 +5,7 @@ class mgallery extends Database{
 	function getalbum()
 	{
 		//query memanggil data
-		$query = "SELECT * FROM album";
+		$query = "SELECT * FROM gallery WHERE status = 1";
 		//memanggil semua data. Jika hanya memanggil 1 data ->fetch($query,0,0)
 		$result = $this->fetch($query,1,0);
 		return $result;

@@ -41,7 +41,7 @@ $(document).ready(function() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol class="breadcrumb">
 	<li><a href="{$basedomain}">Home</a></li>
-	<li class="active">Add News</li>
+	<li class="active">Add Gallery</li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--End breadcrumb-->
@@ -55,7 +55,7 @@ $(document).ready(function() {
 	<div class="col-sm-12">
 			<div class="panel">
 				<div class="panel-heading">
-					<h3 class="panel-title">Create Album</h3>
+					<h3 class="panel-title">Create Gallery</h3>
 				</div>
 	
 				<!--Horizontal Form-->
@@ -64,14 +64,22 @@ $(document).ready(function() {
 					<div class="panel-body">
 
 						<div class="form-group">
-							<label class="col-sm-2 control-label">Nama Album</label>
+							<label class="col-sm-2 control-label">Judul</label>
 							<div class="col-sm-7">
 								<input type="text" name="nm_album" class="form-control">
 							</div>
 						</div>
 						
 						<div class="form-group">
-							<label class="col-sm-2 control-label">Cover Album</label>
+							<label class="col-sm-2 control-label">Deskripsi</label>
+							<div class="col-sm-7">
+								<textarea name="nm_album" class="form-control">
+								</textarea>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Cover Gallery</label>
 							<div class="col-sm-7">
 								<input type="file" name="cover_album">
 							</div>

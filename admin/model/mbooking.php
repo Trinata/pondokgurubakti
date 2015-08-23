@@ -1,5 +1,5 @@
 <?php
-class mcourse extends Database {
+class mbooking extends Database {
 	
 	function asd()
 	{
@@ -73,7 +73,7 @@ class mcourse extends Database {
 	
 	//select group course
 	function select_data(){
-		$query = "SELECT idGrup_kursus,namagrup,syaratkelulusan,n_status,create_time FROM grup_kursus WHERE n_status != '2'";
+		$query = "SELECT * FROM booking WHERE status = 1";
 		// pr($query);
 		$result = $this->fetch($query,1);
 		

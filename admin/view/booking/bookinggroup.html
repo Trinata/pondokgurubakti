@@ -90,9 +90,11 @@ $(window).on('load', function() {
 					<tr>
 						<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class ="pilihan" id="id_tahun" onClick="return selectAll(this)"/></th>
 						<!--<th>No</th>-->
-						<th>Group Name</th>
-						<th>Requirement</th>
-						<th class="min-tablet">Create Time</th>
+						<th>Nama</th>
+						<th>Email</th>
+						<th class="min-tablet">Check In</th>
+						<th class="min-tablet">Check Out</th>
+						<th class="min-tablet">Tipe Kamar</th>
 						<th class="min-tablet">Status</th>
 						<th class="min-tablet">Action</th>
 					</tr>
@@ -103,10 +105,12 @@ $(window).on('load', function() {
 					<tr>
 						<td align="center"><input value="{$value.idGrup_kursus}" type="checkbox" name="check[]" id="check[]"></td>
 						<!--<td align="center" >{$no}</td>-->
-						<td>{$value.namagrup}</td>
-						<td>{$value.syaratkelulusan}</td>
-						<td>{$value.create_time}</td>
-						{if $value.n_status == '1'}
+						<td>{$value.nama}</td>
+						<td>{$value.email}</td>
+						<td>{$value.tanggal_masuk}</td>
+						<td>{$value.tanggal_keluar}</td>
+						<td>{$value.tipe_kamar}</td>
+						{if $value.status == '1'}
 							{$var = 'Active'}
 							{$style= 'color:green'}
 						{else}
@@ -116,7 +120,7 @@ $(window).on('load', function() {
 						<td style="{$style};" align="center">{$var}</td>
 						<td align="center">
 							<button id="" class="demo-bootbox-custom-h-form-edit btn btn-warning btn-labeled fa fa-pencil" value="{$value.idGrup_kursus}" href="#" >Edit</button>
-							<button id="" class="demo-state-btn btn btn-success btn-labeled fa fa-edit" value="{$value.idGrup_kursus|cat:'_'|cat:$value.n_status}" href="#" >Status</button>
+							{*}<button id="" class="demo-state-btn btn btn-success btn-labeled fa fa-edit" value="{$value.idGrup_kursus|cat:'_'|cat:$value.n_status}" href="#" >Status</button>{/*}
 						</td>
 					</tr>
 					<!--{$no++}-->

@@ -86,9 +86,9 @@ $(window).on('load', function() {
 				{foreach $data as $val}
 			<tr>
 			<td>{$val.judul}</td>
-			<td>{$val.username}</td>
-			<td>{$val.posted}</td>
-			<td>{$val.brief}</td>
+			<td>{$val.author}</td>
+			<td>{$val.tanggal_upload}</td>
+			<td>{$val.ulasan}</td>
 			<td>{if $val.status==0} <font style="color:red">Unpublish </font> {elseif $val.status==1} <font style="color:blue"> Publish </font>{/if}</td>
 			<td>
 			<table> 

@@ -83,9 +83,9 @@ $(window).on('load', function() {
 				{if !empty($data)}
 				{foreach $data as $val}
 			<tr>
-			<td>{$val.nm_album}</td>
-			<td><img src="../public_assets/{$val.cover_album}" width="500" height="300"></td>
-			<td><a id ="demo-dt-delete-btn" class="btn btn-success btn-labeled fa fa-pencil-square-o" href="{$basedomain}gallery/getgallery/?id_album={$val.id_album}">View Photo</a></td>
+			<td>{$val.judul}</td>
+			<td><img src="{$app_domain}/public_assets/{$val.filename}" width="500" height="300"></td>
+			<td><a id ="demo-dt-delete-btn" class="btn btn-success btn-labeled fa fa-pencil-square-o" href="{$app_domain}gallery/getgallery/?id_album={$val.id_gmb}">View Photo</a></td>
 			</tr>
 			{/foreach}
 			{/if}

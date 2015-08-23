@@ -1,7 +1,7 @@
 <?php
 // defined ('TATARUANG') or exit ( 'Forbidden Access' );
 
-class course extends Controller {
+class booking extends Controller {
 	
 	var $models = FALSE;
 	
@@ -20,19 +20,27 @@ class course extends Controller {
 	public function loadmodule()
 	{
 		
-		$this->mcourse = $this->loadModel('mcourse');
+		$this->mbooking = $this->loadModel('mbooking');
 	}
 	
 	//module course group
 	public function index(){
 		// echo "masukk ajaa";
-		$select = $this->mcourse->select_data();
+		// $select = $this->mbooking->update_data();
 		// pr($select);
 		$this->view->assign('data',$select);
-		return $this->loadView('course/coursegroup');
+		return $this->loadView('booking/bookinggroup');
 
 	}
 	
+	public function bookinglist(){
+		// echo "masukk ajaa";
+		$select = $this->mbooking->select_data();
+		// pr($select);
+		$this->view->assign('data',$select);
+		return $this->loadView('booking/bookinggroup');
+
+	} 
 	public function ajax_insert(){
 		
 		// pr($_POST);

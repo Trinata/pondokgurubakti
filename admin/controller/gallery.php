@@ -20,6 +20,7 @@ public function index(){
 
 	//memanggil fungsi getalbum pada model
 	$data=$this->models->getalbum();
+	// pr($data);
 	if ($data){	
 		$this->view->assign('data',$data);
 	}

@@ -20,8 +20,9 @@ var $models = FALSE;
 	//listnews
 	public function index(){
 		//memanggil fungsi getnews pada model
-		//pr($this->admin[idUser]);
+		
 		$data=$this->models->getnews();
+		// pr($data);
 		if ($data){	
 			$this->view->assign('data',$data);
 		}

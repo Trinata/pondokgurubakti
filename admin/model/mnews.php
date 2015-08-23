@@ -19,12 +19,12 @@ class mnews extends Database{
 	{
 		//query memanggil data
 
-		$query = "SELECT news.id_news, news.judul, news.author, news.posted, news.gambar, news.brief, news.status, user.username from news, user where news.author = user.idUser && news.status in ('0','1')";
+		$query = "SELECT * FROM news WHERE status = 1";
 		//pr($query);
 		//$query = "SELECT * FROM news WHERE status in ('0','1') ";
 		//pr($query);
 		//memanggil semua data. Jika hanya memanggil 1 data ->fetch($query,0,0)
-		$result = $this->fetch($query,1,0);
+		$result = $this->fetch($query,1);
 		return $result;
 	}
 	
