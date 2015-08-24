@@ -2,11 +2,11 @@
 class mnews extends Database{
 
 	//fungsi untuk eksekusi penyimpanan data news ke database
-	function inputnews($judul,$brief,$namafile,$isi,$author,$publish,$status)
+	function inputnews($judul,$ulasan,$detail,$tanggal_upload,$author,$status)
 	{
 		//query insert data
-		$query = "INSERT INTO news (judul,brief,gambar,author,isi,status,posted)
-					VALUES('".$judul."','".$brief."','".$namafile."','".$author."','".$isi."','".$status."','".$publish."')";
+		$query = "INSERT INTO news (judul,ulasan,author,detail,status,tanggal_upload)
+					VALUES('".$judul."','".$ulasan."','".$author."','".$detail."','".$status."','".$tanggal_upload."')";
 		//pr($author); exit;
 		//eksekusi query
 		$exec = $this->query($query,0);	
@@ -48,10 +48,10 @@ class mnews extends Database{
 		if($exec) return 1; else pr('query gagal');
 	}
 
-	function updatenews($id_news, $judul,$brief,$namafile,$isi,$publish,$status)
+	function updatenews($id_news, $judul,$ulasan,$detail,$tanggal_upload,$status)
 	{
 		//query insert data
-		$query = "UPDATE news SET judul='".$judul."', brief='".$brief."', gambar='".$namafile."', isi='".$isi."', posted='".$publish."',status='".$status."' WHERE id_news = '".$id_news."'";
+		$query = "UPDATE news SET judul='".$judul."', ulasan='".$ulasan."', detail='".$detail."', publish='".$tanggal_upload."',status='".$status."' WHERE id_news = '".$id_news."'";
 		//eksekusi query
 		$exec = $this->query($query,0);	
 		//kondisi apabila eksekusi berhasil mengembalikan notif 1, jika gagal mencetak query gagal 

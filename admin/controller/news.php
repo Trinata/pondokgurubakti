@@ -33,20 +33,20 @@ var $models = FALSE;
 	public function inputnews(){
 		global $CONFIG;
 		//kondisi untuk mengecek validasi form
-		if(isset($_POST['judul']) && isset($_POST['brief']) && isset($_POST['isi'])){
+		if(isset($_POST['judul']) && isset($_POST['ulasan']) && isset($_POST['isi'])){
 			
 			$judul = $_POST['judul'];
-			$brief = $_POST['brief'];
-			$publish = $_POST['publish'];
+			$ulasan = $_POST['ulasan'];
+			$tanggal_upload = $_POST['publish'];
 			$upload = uploadFile('gambar',false,'image');
 			// pr($judul);exit;
 			$namafile=$upload['full_name'];
 			$status = $_POST['status'];
 			//pr($status);exit;
-			$author = $this->admin['idUser'];
+			$author = $this->admin['username'];
 			//pr($author);exit;
-			$isi = $_POST['isi'];
-			$data=$this->models->inputnews($judul,$brief,$namafile,$isi,$author,$publish,$status);
+			$detail = $_POST['isi'];
+			$data=$this->models->inputnews($judul,$ulasan,$detail,$author,$tanggal_upload,$status);
 			//kondisi untuk memberi peringatan proses input berhasil atau tidak
 			if($data == 1){
 				echo "<script>alert('Data berhasil di simpan');window.location.href='".$CONFIG['admin']['base_url']."news'</script>";
@@ -89,15 +89,15 @@ var $models = FALSE;
 		//eksekusi jika melakukan perubahan terhadap data news
 		else{
 			$judul = $_POST['judul'];
-			$brief = $_POST['brief'];
-			$publish = $_POST['publish'];
+			$ulasan = $_POST['ulasan'];
+			$tanggal_upload = $_POST['publish'];
 			$status = $_POST['status'];
 			$upload = uploadFile('gambar',false,'image');
 			// pr($judul);exit;
 			$namafile=$upload['full_name'];
-			//$author = $_POST['author'];
-			$isi = $_POST['isi'];
-			$data=$this->models->updatenews($id_news,$judul,$brief,$namafile,$isi,$publish,$status);
+			$author = $_POST['author'];
+			$detail = $_POST['isi'];
+			$data=$this->models->updatenews($id_news,$judul,$ulasan,$author,$detail,$tanggal_upload,$status);
 			if($data == 1){
 				echo "<script>alert('Data berhasil di perbarui');window.location.href='".$CONFIG['admin']['base_url']."news'</script>";
 			}
