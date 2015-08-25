@@ -2,16 +2,16 @@
 class mnews extends Database{
 
 	//fungsi untuk eksekusi penyimpanan data news ke database
-	function inputnews($judul,$ulasan,$detail,$tanggal_upload,$author,$status)
+	function inputnews($judul,$ulasan,$detail,$author,$tanggal_upload,$status)
 	{
 		//query insert data
 		$query = "INSERT INTO news (judul,ulasan,author,detail,status,tanggal_upload)
 					VALUES('".$judul."','".$ulasan."','".$author."','".$detail."','".$status."','".$tanggal_upload."')";
-		//pr($author); exit;
+		// pr($query); exit;
 		//eksekusi query
-		$exec = $this->query($query,0);	
+		$exec = $this->query($query);	
 		//kondisi apabila eksekusi berhasil mengembalikan notif 1, jika gagal mencetak query gagal 
-		if($exec) return 1; else pr('query gagal');
+		if($exec) return TRUE; else return FALSE;
 	}
 
 	//fungsi unt

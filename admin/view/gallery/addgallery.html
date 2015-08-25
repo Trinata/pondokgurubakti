@@ -60,7 +60,7 @@ $(document).ready(function() {
 	
 				<!--Horizontal Form-->
 				<!--===================================================-->
-				<form class="form-horizontal" action="{$basedomain}gallery/inputgallery/?id_album={$data}" method="post" enctype="multipart/form-data">
+				<form class="form-horizontal" action="{$basedomain}gallery/inputgallery/?id_gmb={$data}" method="post" enctype="multipart/form-data">
 					<div class="panel-body">
 
 						<div class="form-group">
@@ -96,7 +96,17 @@ $(document).ready(function() {
 							</div>
 						</div>
 					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Status</label>
+							<div class="col-sm-7">
+								<input type="radio" name="status" value="0" id="status1" > Unpublish &nbsp &nbsp &nbsp
+								<input type="radio" name="status" value="1" id="status1" > Publish
+							</div>
+					</div>
+						
 					<div class="panel-footer text-right">
+						<input type="hidden" name="id_gmb" value="{$data}"/>
 						<button class="btn btn-info" type="submit">Save</button>
 					</div>
 				</form>

@@ -77,23 +77,30 @@ $(window).on('load', function() {
 						<th>Jenis File</th>
 						<th class="min-tablet">Photo</th>
 						<th class="min-tablet">Deskripsi</th>
+						<th class="min-tablet">Status</th>
+						<th class="min-tablet">Action</th>
 					</tr>
 				</thead>
 				<tbody>
 				{if !empty($data)}
 				{foreach $data.data as $val}
-			<tr>
-			<td>{$val.nm_gallery}</td>
-			<td>{$val.jns_file}</td>
-			<td>{if $val.jns_file==Foto} <img src="../../../public_assets/{$val.path_lokasi}" width="500" height="300"> {elseif $val.jns_file==Video}   <video width="600" height="400" controls>
-<source src="../../../public_assets/{$val.path_lokasi}" type="video/mp4">
-</video>
-{/if}</td>
-			
-			<td>{$val.deskripsi}</td>
-			</tr>
-			{/foreach}
-			{/if}
+					<tr>
+						<td>{$val.judul}</td>
+						<td>{$val.jns_file}</td>
+						<td><img src="{$app_domain}public_assets/{$val.filename}" width="200" height="100"> </td>
+						<td>{$val.deskripsi}</td>
+						<td>{if $val.status==0} <font style="color:red">Unpublish </font> {elseif $val.status==1} <font style="color:blue"> Publish </font>{/if}</td>
+						<td>
+							<table> 
+								<tr>
+									<td><a id ="demo-dt-delete-btn" class="btn btn-success btn-labeled fa fa-pencil-square-o" href="{$basedomain}gallery/editgallery/?id_gmb={$val.id_gmb}">Edit</a></td>
+									<td><a id ="demo-dt-delete-btn" class="btn btn-danger btn-labeled fa fa-times" href="{$basedomain}gallery/deletegallery/?id_gmb={$val.id_gmb}">Delete</a></td>
+								</tr>
+							</table>
+						</td>	
+					</tr>
+				{/foreach}
+				{/if}
 				</tbody>
 			</table>
 		</div>

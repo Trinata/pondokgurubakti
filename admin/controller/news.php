@@ -44,7 +44,7 @@ var $models = FALSE;
 			$status = $_POST['status'];
 			//pr($status);exit;
 			$author = $this->admin['username'];
-			//pr($author);exit;
+			// pr($author);exit;
 			$detail = $_POST['isi'];
 			$data=$this->models->inputnews($judul,$ulasan,$detail,$author,$tanggal_upload,$status);
 			//kondisi untuk memberi peringatan proses input berhasil atau tidak

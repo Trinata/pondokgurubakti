@@ -1,0 +1,30 @@
+a:5:{s:4:"name";s:21:"3d-white-solution.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpD65B.tmp";s:5:"error";i:0;s:4:"size";i:21075;}
+a:5:{s:4:"name";s:21:"3d-white-solution.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpE1B2.tmp";s:5:"error";i:0;s:4:"size";i:21075;}
+a:5:{s:4:"name";s:21:"3d-white-solution.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpEC6D.tmp";s:5:"error";i:0;s:4:"size";i:21075;}
+a:5:{s:4:"name";s:21:"3d-white-solution.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpD22A.tmp";s:5:"error";i:0;s:4:"size";i:21075;}
+a:5:{s:4:"name";s:21:"3d-white-solution.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php3F5E.tmp";s:5:"error";i:0;s:4:"size";i:21075;}
+a:5:{s:4:"name";s:21:"3d-white-solution.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpD1AF.tmp";s:5:"error";i:0;s:4:"size";i:21075;}
+a:5:{s:4:"name";s:41:"screen-shot-2015-01-20-at-11-15-49-am.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpE6B7.tmp";s:5:"error";i:0;s:4:"size";i:475868;}
+a:5:{s:4:"name";s:41:"screen-shot-2015-01-20-at-11-15-49-am.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:23:"C:\xampp\tmp\phpBA6.tmp";s:5:"error";i:0;s:4:"size";i:475868;}
+a:5:{s:4:"name";s:27:"treed-wordybubbles-when.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:24:"C:\xampp\tmp\php44EF.tmp";s:5:"error";i:0;s:4:"size";i:32644;}
+a:5:{s:4:"name";s:11:"4387813.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpB733.tmp";s:5:"error";i:0;s:4:"size";i:52934;}
+a:5:{s:4:"name";s:6:"im.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php1230.tmp";s:5:"error";i:0;s:4:"size";i:38462;}
+a:5:{s:4:"name";s:27:"treed-wordybubbles-when.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpF7B0.tmp";s:5:"error";i:0;s:4:"size";i:32644;}
+INSERT INTO gallery(id_gmb,nm_gallery,jns_file,path_lokasi,deskripsi)
+					VALUES('','dfdf','Foto','6417672f2a54065e65142e5ae7d4454a.png','fdfsfsfsd')
+a:5:{s:4:"name";s:6:"im.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpB61A.tmp";s:5:"error";i:0;s:4:"size";i:38462;}
+a:5:{s:4:"name";s:6:"im.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php6EFF.tmp";s:5:"error";i:0;s:4:"size";i:38462;}
+a:5:{s:4:"name";s:27:"treed-wordybubbles-when.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpAB45.tmp";s:5:"error";i:0;s:4:"size";i:32644;}
+a:5:{s:4:"name";s:41:"screen-shot-2015-01-20-at-11-15-49-am.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:24:"C:\xampp\tmp\php1994.tmp";s:5:"error";i:0;s:4:"size";i:475868;}
+a:5:{s:4:"name";s:41:"screen-shot-2015-01-20-at-11-15-49-am.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpF65C.tmp";s:5:"error";i:0;s:4:"size";i:475868;}
+a:5:{s:4:"name";s:41:"screen-shot-2015-01-20-at-11-15-49-am.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:24:"C:\xampp\tmp\php45A5.tmp";s:5:"error";i:0;s:4:"size";i:475868;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('3','csacacs','Foto','ab8f6543198a5c94a93a591f502169c8.png','csacsaca')
+a:5:{s:4:"name";s:43:"11923069_10205789997083737_1179599708_n.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php95C8.tmp";s:5:"error";i:0;s:4:"size";i:58615;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('7','dd','Foto','5b8002cdbbb1d1120072d6fed03bef98.jpg','dddddddddddddddddddddddddddddd')
+a:5:{s:4:"name";s:27:"treed-wordybubbles-when.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:23:"C:\xampp\tmp\php32C.tmp";s:5:"error";i:0;s:4:"size";i:32644;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('7','vxvxvvx','Foto','b461eda3c6608f34e94443dd9f189d9c.png','vcxvx')
+a:5:{s:4:"name";s:43:"11923069_10205789997083737_1179599708_n.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php2084.tmp";s:5:"error";i:0;s:4:"size";i:58615;}
+a:5:{s:4:"name";s:43:"11923069_10205789997083737_1179599708_n.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php3BE1.tmp";s:5:"error";i:0;s:4:"size";i:58615;}
