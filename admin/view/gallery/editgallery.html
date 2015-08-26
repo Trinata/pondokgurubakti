@@ -74,10 +74,10 @@ $(document).ready(function() {
 							<label class="col-sm-2 control-label">Jenis File</label>
 							<div class="col-sm-7">
 								<label>
-		                			<input type="radio" name="jns_file" id="foto" value="Foto"> Foto
+		                			<input type="radio" name="jns_file" id="foto" value="Foto" {if ($data.jns_file=="Foto")} checked=""{/if}> Foto
 		                       	</label>&nbsp &nbsp
 		                       	<label>
-		                          	<input type="radio" name="jns_file" id="video" value="Video"> Video
+		                          	<input type="radio" name="jns_file" id="video" value="Video" {if ($data.jns_file=="Video")} checked=""{/if}> Video
 		                     	</label> 
 							</div>
 						</div>
@@ -100,8 +100,8 @@ $(document).ready(function() {
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Status</label>
 							<div class="col-sm-7">
-								<input type="radio" name="status" value="0" id="status1" > Unpublish &nbsp &nbsp &nbsp
-								<input type="radio" name="status" value="1" id="status1" > Publish
+								<input type="radio" name="status" value="0" id="status1" {if ($data.status==0)} checked=""{/if}> Unpublish &nbsp &nbsp &nbsp
+								<input type="radio" name="status" value="1" id="status1" {if ($data.status==1)} checked=""{/if}> Publish
 							</div>
 					</div>
 						

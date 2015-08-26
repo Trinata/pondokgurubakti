@@ -1,0 +1,28 @@
+a:5:{s:4:"name";s:9:"Koala.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpE4D9.tmp";s:5:"error";i:0;s:4:"size";i:780831;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('3','kaptain','Foto','e4386b0b6e27b38a0938108b3b520af0.jpg','alkisah alkisah alkisah alkisah alkisah alkisah v alkisah alkisah alkisah alkisah v v alkisah alkisah alkisah v alkisahalkisahv
+
+alkisahalkisahv
+alkisahalkisah
+
+
+
+alkisahalkisah
+
+alkisah alkisah alkisah alkisah alkisah alkisah v alkisah alkisah alkisah alkisah v v alkisah alkisah alkisah v alkisahalkisahv
+
+alkisahalkisahv
+alkisahalkisah
+
+
+
+alkisahalkisah
+
+alkisah alkisah alkisah alkisah alkisah alkisah v alkisah alkisah alkisah alkisah v v alkisah alkisah alkisah v alkisahalkisahv
+
+alkisahalkisahv
+alkisahalkisah
+
+
+
+alkisahalkisah')

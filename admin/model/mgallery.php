@@ -51,7 +51,7 @@ class mgallery extends Database{
 	function updategallery($id_gmb,$judul,$jns_file,$deskripsi,$filename,$status)
 	{
 		//query insert data
-		$query = "UPDATE gallery SET judul='".$judul."', jns_file='".$jns_file."', deskripsi='".$deskripsi."', filename='".$filename."',status='".$status."' WHERE other_id = '".$id_gmb."'";
+		$query = "UPDATE gallery SET judul='".$judul."', jns_file='".$jns_file."', deskripsi='".$deskripsi."', filename='".$filename."', status='".$status."' WHERE other_id = '".$id_gmb."'";
 		//eksekusi query
 		$exec = $this->query($query,0);	
 		//kondisi apabila eksekusi berhasil mengembalikan notif 1, jika gagal mencetak query gagal 

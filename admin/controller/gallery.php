@@ -140,7 +140,7 @@ public function editgallery(){
 			$upload = uploadFile('gambar',false,'image');
 			// pr($judul);exit;
 			$filename=$upload['full_name'];
-			$status = $_POST['status'];
+			$status = $_POST['status1'];
 			$data=$this->models->updategallery($id_gmb,$judul,$jns_file,$deskripsi,$filename,$status);
 			if($data == 1){
 				echo "<script>alert('Data berhasil di perbarui');window.location.href='".$CONFIG['admin']['base_url']."gallery'</script>";
