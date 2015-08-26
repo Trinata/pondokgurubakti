@@ -33,6 +33,11 @@ class booking extends Controller {
 
 	}
 	
+	function add_booking()
+	{
+		return $this->loadView('booking/addbooking');
+	}
+
 	public function bookinglist(){
 		// echo "masukk ajaa";
 		$select = $this->mbooking->select_data();
