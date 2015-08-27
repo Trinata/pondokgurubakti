@@ -16,8 +16,6 @@ class mgallery extends Database{
 	{
 		$query = "INSERT INTO gallery(judul, deskripsi, filename)
 					VALUES('".$judul."','".$deskripsi."','".$filename."')";
-		//eksekusi query
-		// pr($query);exit;
 		$exec = $this->query($query);	
 		//kondisi apabila eksekusi berhasil mengembalikan notif 1, jika gagal mencetak query gagal 
 		if($exec) return 1; else pr('query gagal');
@@ -29,7 +27,6 @@ class mgallery extends Database{
 		//query memanggil data
 		$query = "SELECT * FROM gallery WHERE other_id='".$id_gmb."' and status in (0,1)";
 		
-		// pr($query);
 		//memanggil semua data. Jika hanya memanggil 1 data ->fetch($query,0,0)
 		$result = $this->fetch($query,1);
 		return $result;
@@ -42,7 +39,6 @@ class mgallery extends Database{
 		$query = "INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
 					VALUES('".$id_gmb."','".$judul."','".$jns_file."','".$filename."','".$deskripsi."')";
 		//eksekusi query
-		// pr($query);exit;
 		logFile($query);
 		$exec = $this->query($query,0);	
 		//kondisi apabila eksekusi berhasil mengembalikan notif 1, jika gagal mencetak query gagal 
@@ -52,8 +48,9 @@ class mgallery extends Database{
 	function updategallery($id_gmb,$judul,$jns_file,$deskripsi,$filename,$status)
 	{
 		//query insert data
-		$query = "UPDATE gallery SET judul='".$judul."', jns_file='".$jns_file."', deskripsi='".$deskripsi."', filename='".$filename."', status='".$status."' WHERE other_id = '".$id_gmb."'";
+		$query = "UPDATE gallery SET judul='".$judul."', jns_file='".$jns_file."', deskripsi='".$deskripsi."', filename='".$filename."', status='".$status."' WHERE id_gmb = '".$id_gmb."' LIMIT 1";
 		//eksekusi query
+		// pr($query);exit;
 		$exec = $this->query($query,0);	
 		//kondisi apabila eksekusi berhasil mengembalikan notif 1, jika gagal mencetak query gagal 
 		if($exec) return 1; else pr('query gagal');

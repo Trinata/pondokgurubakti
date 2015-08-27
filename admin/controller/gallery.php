@@ -9,6 +9,7 @@ public function __construct()
 	parent::__construct();
 	$this->loadmodule();
 	$this->view=$this->setSmarty();
+	// pr($app_domain);
 	$this->view->assign('app_domain',$app_domain);
 	$this->view->assign('basedomain',$basedomain);
 }
@@ -67,7 +68,7 @@ public function getgallery(){
 		// $vardata=array("$id_gmb","$data");
 		$vardata['id'] = $id_gmb;
 		$vardata['data'] = $data;
-		pr($vardata);
+		// pr($vardata);
 		$this->view->assign('data',$vardata);
 	// }
 	return $this->loadView('gallery/listgallery');
@@ -99,7 +100,7 @@ public function inputgallery(){
 		// pr($data);exit;
 		if($data == 1){
 			//pr('Sukses masuk');
-			echo "<script>alert('Data berhasil di simpan');window.location.href='".$CONFIG['admin']['base_url']."gallery/getgallery/?id_gmb=".$id_gmb."'</script>";
+			echo "<script>alert('Data berhasil di simpan');window.location.href='".$CONFIG['admin']['base_url']."gallery/getgallery/?id_album=".$id_gmb."'</script>";
 			exit;
 		}	
 	}
@@ -124,10 +125,13 @@ public function inputgallery(){
 public function editgallery(){
 		global $CONFIG;
 		$id_gmb = $_GET['id_gmb'];
+		$id_album = $_GET['album_id'];
 		//kondisi apabila tidak melakukan perubahan
-		if ($_POST == null){	
+		if ($_POST == null){
 			$data=$this->models->selectgallery($id_gmb);
-			pr ($data);
+			// pr ($data);
+			$this->view->assign('id_gmb',$id_gmb);
+			$this->view->assign('id_album',$id_album);
 			if ($data){	
 				$this->view->assign('data',$data);
 			}	
@@ -138,14 +142,23 @@ public function editgallery(){
 			$judul = $_POST['judul'];
 			$jns_file = $_POST['jns_file'];
 			$deskripsi = $_POST['deskripsi'];
-			$upload = uploadFile('gambar',false,'image');
-			// pr($judul);exit;
-			$filename=$upload['full_name'];
-			$status = $_POST['status1'];
+			$filename = $_POST['filename'];	
+			$status = $_POST['status'];
+			$id_gmb = $_POST['id_gmb'];
+			$id_album = $_POST['id_album'];
+
+			// cek kalo gambar di edit, baru diupload lagi
+			if ($_FILES['filename']['name']){
+				$upload = uploadFile('filename',false,'image');
+				$filename=$upload['full_name'];
+			}
+			// pr($_POST);
+			// pr($upload);
+			// exit;
 			$data=$this->models->updategallery($id_gmb,$judul,$jns_file,$deskripsi,$filename,$status);
-			pr($data);
+			// pr($data);exit;
 			if($data == 1){
-				echo "<script>alert('Data berhasil di perbarui');window.location.href='".$CONFIG['admin']['base_url']."gallery/getgallery/?id_album=".$id_gmb."'</script>";
+				echo "<script>alert('Data berhasil di perbarui');window.location.href='".$CONFIG['admin']['base_url']."gallery/getgallery/?id_album=".$id_album."'</script>";
 			}
 		}
 	}
