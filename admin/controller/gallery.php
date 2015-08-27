@@ -41,7 +41,7 @@ public function addalbum(){
 	return $this->loadView('gallery/addalbum');
 }
 
-//Fungsi untuk melempar data dari form tambah album ke model
+//Fungsi untuk melempar data dari form tambah talbum ke model
 public function inputalbum(){
 	global $CONFIG;
 	$judul = $_POST['judul'];
@@ -61,13 +61,13 @@ public function inputalbum(){
 //Menampilkan halaman galeri foto sesuai dengan album yang dipilih
 public function getgallery(){
 	//menangkap parameter id_gmb dari halaman album
-	$id_gmb=$_GET['id_gmb'];
+	$id_gmb=$_GET['id_album'];
 	$data=$this->models->getgallery($id_gmb);
 	// if ($data){	
 		// $vardata=array("$id_gmb","$data");
 		$vardata['id'] = $id_gmb;
 		$vardata['data'] = $data;
-		// pr($vardata);
+		pr($vardata);
 		$this->view->assign('data',$vardata);
 	// }
 	return $this->loadView('gallery/listgallery');
@@ -127,6 +127,7 @@ public function editgallery(){
 		//kondisi apabila tidak melakukan perubahan
 		if ($_POST == null){	
 			$data=$this->models->selectgallery($id_gmb);
+			pr ($data);
 			if ($data){	
 				$this->view->assign('data',$data);
 			}	
@@ -142,8 +143,9 @@ public function editgallery(){
 			$filename=$upload['full_name'];
 			$status = $_POST['status1'];
 			$data=$this->models->updategallery($id_gmb,$judul,$jns_file,$deskripsi,$filename,$status);
+			pr($data);
 			if($data == 1){
-				echo "<script>alert('Data berhasil di perbarui');window.location.href='".$CONFIG['admin']['base_url']."gallery'</script>";
+				echo "<script>alert('Data berhasil di perbarui');window.location.href='".$CONFIG['admin']['base_url']."gallery/getgallery/?id_album=".$id_gmb."'</script>";
 			}
 		}
 	}
@@ -155,7 +157,7 @@ public function editgallery(){
 		//melempar id_gallery ke fungsi deletenews yang ada di model
 		$data=$this->models->deletegallery($id_gmb);
 		if($data == 1){
-			echo "<script>alert('Data berhasil di hapus');window.location.href='".$CONFIG['admin']['base_url']."gallery'</script>";
+			echo "<script>alert('Data berhasil di hapus');window.location.href='".$CONFIG['admin']['base_url']."gallery/getgallery/?id_album=".$id_gmb."'</script>";
 		}
 		else {pr('gagal');}
 	}

@@ -26,3 +26,18 @@ alkisahalkisah
 
 
 alkisahalkisah')
+a:5:{s:4:"name";s:10:"Desert.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php3A94.tmp";s:5:"error";i:0;s:4:"size";i:845941;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('18','aaaaddddd','Foto','c0fac6cde374fa3e1c2083aecaa66e11.jpg','cddxdfdcd d ')
+a:5:{s:4:"name";s:10:"Tulips.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpB7EF.tmp";s:5:"error";i:0;s:4:"size";i:620888;}
+a:5:{s:4:"name";s:9:"Koala.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php6EA1.tmp";s:5:"error";i:0;s:4:"size";i:780831;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('18','koalaaa','Foto','be1b5716de56abd307cd5a697ca7c8bd.jpg','koalaaakoalaaakoalaaakoalaaa
+
+
+koalaaa
+koalaaa
+
+
+
+koalaaa')

@@ -5,7 +5,7 @@ class mgallery extends Database{
 	function getalbum()
 	{
 		//query memanggil data
-		$query = "SELECT * FROM gallery WHERE status in (0,1)";
+		$query = "SELECT * FROM gallery WHERE status in (0,1) and other_id = 0";
 		//memanggil semua data. Jika hanya memanggil 1 data ->fetch($query,0,0)
 		$result = $this->fetch($query,1);
 		return $result;
@@ -28,6 +28,7 @@ class mgallery extends Database{
 	{
 		//query memanggil data
 		$query = "SELECT * FROM gallery WHERE other_id='".$id_gmb."' and status in (0,1)";
+		
 		// pr($query);
 		//memanggil semua data. Jika hanya memanggil 1 data ->fetch($query,0,0)
 		$result = $this->fetch($query,1);
