@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2015 at 07:35 AM
+-- Generation Time: Sep 02, 2015 at 06:12 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.5.24
 
@@ -36,16 +36,19 @@ CREATE TABLE IF NOT EXISTS `booking` (
   `tanggal_masuk` datetime NOT NULL,
   `tanggal_keluar` datetime NOT NULL,
   `status` tinyint(1) NOT NULL,
-  `extra_bed` int(20) NOT NULL,
-  `code_booking` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `extra_bed` int(20) NOT NULL DEFAULT '0',
+  `code_booking` varchar(10) NOT NULL,
+  `date_book` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `booking`
 --
 
-INSERT INTO `booking` (`id_booking`, `nama`, `alamat`, `no_telp`, `email`, `tipe_kamar`, `tanggal_masuk`, `tanggal_keluar`, `status`, `extra_bed`, `code_booking`) VALUES
-(1, 'ar', 'gfagsfggagag', '4434343', 'arum@gmail.com', 4, '2015-08-23 00:00:00', '2015-08-25 00:00:00', 1, 2, 'aaaa');
+INSERT INTO `booking` (`id_booking`, `nama`, `alamat`, `no_telp`, `email`, `tipe_kamar`, `tanggal_masuk`, `tanggal_keluar`, `status`, `extra_bed`, `code_booking`, `date_book`) VALUES
+(1, 'ar', 'gfagsfggagag', '4434343', 'arum@gmail.com', 4, '2015-08-23 00:00:00', '2015-08-25 00:00:00', 1, 2, 'aaaa', '0000-00-00 00:00:00'),
+(7, 'AFD', '', 'FDAF', 'FDFA', 4, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, '', '2015-09-02 15:01:56'),
+(8, 'fdsdfsdf', '', 'dfasfas', 'dafdfas', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 'U2AJ3F', '2015-09-02 15:12:37');
 
 -- --------------------------------------------------------
 
@@ -65,24 +68,32 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `deskripsi` varchar(300) NOT NULL,
   `cover_gambar` varchar(100) NOT NULL,
   `jns_file` varchar(20) NOT NULL,
-  `other_id` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+  `other_id` int(11) NOT NULL DEFAULT '0',
+  `tipe_album` int(10) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gallery`
 --
 
-INSERT INTO `gallery` (`id_gmb`, `judul`, `url`, `comment`, `filename`, `date_upload`, `content_id`, `status`, `deskripsi`, `cover_gambar`, `jns_file`, `other_id`) VALUES
-(2, 'dsadsa', 'dsada', 'dsadsa', 'dsadsada', '0000-00-00 00:00:00', 1, 1, '', '', '', 0),
-(3, 'aaaaaaa', '', '', 'b367b8c6bf440f1132a6945be6f532cc.jpg', '0000-00-00 00:00:00', 0, 0, 'dsadasda	sadsad						', '', '', 0),
-(4, 'bbbb', '', '', '', '0000-00-00 00:00:00', 0, 0, 'bbbb					', '', '', 0),
-(5, 'cccc', '', '', '89865a7912e51336f142982511248669.png', '0000-00-00 00:00:00', 0, 0, 'cccc	', '', '', 0),
-(6, 'ar', '', '', 'cf8e16469f3e05eddee0cc9481779a7d.jpg', '0000-00-00 00:00:00', 0, 0, 'ararrrrrrarararaarrr						', '', '', 0),
-(7, 'asa', '', '', '36e8de09de0ebcf6af69be8254151c80.jpg', '0000-00-00 00:00:00', 0, 0, 'fsafad			', '', '', 0),
-(8, 'csacacs', '', '', 'ab8f6543198a5c94a93a591f502169c8.png', '0000-00-00 00:00:00', 0, 2, 'csacsaca', '', 'Foto', 3),
-(9, 'dd', '', '', '5b8002cdbbb1d1120072d6fed03bef98.jpg', '0000-00-00 00:00:00', 0, 0, 'dddddddddddddddddddddddddddddd', '', 'Foto', 7),
-(10, 'vxvxvvx', '', '', 'b461eda3c6608f34e94443dd9f189d9c.png', '0000-00-00 00:00:00', 0, 0, 'vcxvx', '', 'Foto', 7),
-(11, 'kaptain', '', '', '', '0000-00-00 00:00:00', 0, 0, 'alkisah alkisah alkisah alkisah alkisah alkisah v alkisah alkisah alkisah alkisah v v alkisah alkisah alkisah v alkisahalkisahv\r\n\r\nalkisahalkisahv\r\nalkisahalkisah\r\n\r\n\r\n\r\nalkisahalkisah\r\n\r\nalkisah alkisah alkisah alkisah alkisah alkisah v alkisah alkisah alkisah alkisah v v alkisah alkisah alkisah v ', '', 'Foto', 3);
+INSERT INTO `gallery` (`id_gmb`, `judul`, `url`, `comment`, `filename`, `date_upload`, `content_id`, `status`, `deskripsi`, `cover_gambar`, `jns_file`, `other_id`, `tipe_album`) VALUES
+(18, 'aru', '', '', '532cb1681069fda9948aa24fba4ed697.jpg', '0000-00-00 00:00:00', 0, 2, 'afafssssssssssssssssssssssss								', '', '', 0, 0),
+(21, 'yip', '', '', 'c836769b9608e8edc909aa756a6ae232.jpg', '0000-00-00 00:00:00', 0, 0, '432423432 \r\ne434324\r\n\r\n\r\ngdfg\r\ndfg\r\ndfg\r\nd\r\nfg\r\nd\r\ngsd						', '', '', 0, 0),
+(22, 'koalaaa', '', '', 'be1b5716de56abd307cd5a697ca7c8bd.jpg', '0000-00-00 00:00:00', 0, 2, 'koalaaakoalaaakoalaaakoalaaa\r\n\r\n\r\nkoalaaa\r\nkoalaaa\r\n\r\n\r\n\r\nkoalaaa', '', 'Foto', 18, 0),
+(23, 'arumzzzzz', '', '', '', '0000-00-00 00:00:00', 0, 2, 'Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsu', '', '', 0, 0),
+(24, 'ocop', '', '', 'eda3f3b86d1ae6293760ed7bd3006a76.jpg', '0000-00-00 00:00:00', 0, 0, 'rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								', '', '', 0, 0),
+(25, 'juice', '', '', '431b033540a1ec0250f45b0542eb1a97.png', '0000-00-00 00:00:00', 0, 1, 'jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			\r\n\r\n\r\njdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			', '', '', 0, 0),
+(26, 'Gallery Kamar', '', '', '04e163e93ae3dd7e3307ed96228ff238.jpg', '0000-00-00 00:00:00', 0, 1, 'Gallery Kamar', '', '', 0, 1),
+(27, 'ar 1', '', '', '4196a58611ab145b2f8523832c5b00de.jpg', '0000-00-00 00:00:00', 0, 2, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.\r\n\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.\r\n\r\nLorem ipsum dolor sit ', '', 'Foto', 26, 0),
+(28, 'ar 2', '', '', '84772c5aec75b52bde5389387cc414ac.jpg', '0000-00-00 00:00:00', 0, 1, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.\r\n\r\n\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.\r\n\r\n\r\n\r\n\r\nLorem ipsum do', '', 'Foto', 26, 0),
+(29, 'dd', '', '', '96a9405286e878fedf1de427287c7808.jpg', '0000-00-00 00:00:00', 0, 2, 'd', '', 'Foto', 25, 0),
+(30, 'kakak', '', '', '5cc0683c5e188d3d965f6e801bcb79cb.jpg', '0000-00-00 00:00:00', 0, 2, 'mfdjdfkdkfdskfasjfjdsfh', '', 'Foto', 18, 0),
+(31, 'sjysjalo', '', '', 'b1f47fb10ac6ac5368e99e8a0c49faac.jpg', '0000-00-00 00:00:00', 0, 0, 'hdfkahsfkh sadfhds', '', 'Foto', 18, 0),
+(32, 'fhasfhkdfh', '', '', '23df934f93ba870bd37c763e3748384b.jpg', '0000-00-00 00:00:00', 0, 2, 'dsflasdjfjfasifj', '', 'Foto', 18, 0),
+(34, 'mamah', '', '', 'ab9af36c732b3e8b90a58d7ec9349945.jpg', '2015-09-02 13:59:07', 0, 1, 'dubudiiii			', '', '', 0, 0),
+(35, 'arumzzzzz', '', '', '', '2015-09-02 14:39:14', 0, 2, 'Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsu', '', '', 0, 0),
+(36, 'arumzzzzz', '', '', '', '2015-09-02 14:40:06', 0, 2, 'Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsu', '', '', 0, 0),
+(37, 'AKU', '', '', 'c532d92402ec10a6410a9507ffd2d49b.jpg', '2015-09-02 14:56:14', 0, 0, 'FFFFFF								\r\n								\r\n								', '', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -97,22 +108,20 @@ CREATE TABLE IF NOT EXISTS `news` (
   `detail` varchar(500) NOT NULL,
   `tanggal_upload` datetime NOT NULL,
   `author` varchar(20) NOT NULL,
-  `status` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+  `gambar` varchar(100) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL,
+  `post_date` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`id_news`, `judul`, `ulasan`, `detail`, `tanggal_upload`, `author`, `status`) VALUES
-(1, 'fafafadf', 'ffaadfadfasdfdsaf', 'dfadasfadsfasdasdfdas', '2015-08-23 00:00:00', 'aa', 2),
-(2, 'lalallalaaa', 'afafafaefafaefaef', '<p>efeafawefaefafafaewfafaeaw</p>', '2015-07-29 00:00:00', '', 1),
-(3, 'jajal aja yah', 'ini adalah coba coba', '<p><p>ini adalah coba coba&nbsp;ini adalah coba coba&nbsp;ini adalah coba coba&nbsp;ini adalah coba coba &nbsp;ini adalah coba coba</p><p><br></p><p>ini adalah coba coba</p><p>ini adalah coba coba</p><p>ini adalah coba coba<br></p><hr id="[object Object]">ini adalah coba coba<hr id="[object Object]">ini adalah coba coba<hr id="[object Object]">v</p><hr id="[object Object]">v<hr id="[object Object]">ini adalah coba coba<hr id="[object Object]">ini adalah coba coba<hr id="[object Object]">v<hr id=', '0000-00-00 00:00:00', '2015-08-19', 1),
-(4, 'coba malam malam', 'aaaa', '<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p><br></p><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaav</p><p><br></p><p><br></p><p><br></p><p>aaaa<br></p>', '0000-00-00 00:00:00', '2015-08-26', 1),
-(5, 'arum coba siang', 'a', '2015-08-01', '0000-00-00 00:00:00', '0', 1),
-(6, 'csasaca', 'csasa', '<p>csacsacas</p>', '0000-00-00 00:00:00', '2015-07-28', 1),
-(7, 'aaaaa', 'csacasca', '<p>csacsacascacsa</p>', '2015-07-06 00:00:00', 'admin', 1),
-(8, 'aaaaaaa', 'asasasa', '<p>sasasa</p>', '2015-07-28 00:00:00', 'admin', 1);
+INSERT INTO `news` (`id_news`, `judul`, `ulasan`, `detail`, `tanggal_upload`, `author`, `gambar`, `status`, `post_date`) VALUES
+(10, 'test berita', 'hjthjdtrhjdtrh', 'shsthstrhsrthsrthsr', '2015-08-31 00:00:00', 'admin', '4ca13df65828018d9d92455467669d7d.jpg', 1, '0000-00-00 00:00:00'),
+(11, 'arumz', 'faafa', '<p>agddgadgadsgadsgadgasdgadsgad</p>', '2015-08-01 00:00:00', 'admin', '1a62de6f2f8cf3b8cf0f464513711139.jpg', 1, '0000-00-00 00:00:00'),
+(12, 'beautyyyy', 'when when when when when when when when when when when when when when when when when when when when ', '<p>hhh&nbsp;<span style="line-height: 17.142858505249px;">hhh&nbsp;</span><span style="line-height: 17.142858505249px;">hhh&nbsp;</span><span style="line-height: 17.142858505249px;">hhh&nbsp;</span><span style="line-height: 17.142858505249px;">hhh&nbsp;</span><span style="line-height: 17.142858505249px;">hhh&nbsp;</span><span style="line-height: 17.142858505249px;">hhh&nbsp;</span><span style="line-height: 17.142858505249px;">hhh&nbsp;</span><span style="line-height: 17.142858505249px;">hhh&nbsp', '2015-09-01 00:00:00', 'admin', 'ae1b63671bc73018a228a94e615ddc8a.png', 1, '0000-00-00 00:00:00'),
+(13, 'undangan', 'syalaalallalalala hhh hhh hhh hhh hhh hhh hhh hhh hhh hhh\r\n hhh hhh hhh hhh hhh hhh hhh hhh hhh hhh\r', '<p>duduww</p><p><br></p><p><span style="line-height: 17.142858505249px;">duduww</span><span style="line-height: 17.142858505249px;">duduww</span><span style="line-height: 17.142858505249px;">duduww</span></p><p><span style="line-height: 17.142858505249px;"><br></span></p><p><span style="line-height: 17.142858505249px;"><br></span></p><p><span style="line-height: 17.142858505249px;">duduww</span><span style="line-height: 17.142858505249px;">duduww</span><span style="line-height: 17.142858505249px', '2015-09-05 00:00:00', 'admin', '1749e170d54dc6a0170080474ccf65ed.jpg', 1, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -176,17 +185,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id_booking` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_booking` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id_gmb` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `id_gmb` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id_news` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id_news` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `user`
 --
