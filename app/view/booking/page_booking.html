@@ -37,63 +37,68 @@
 							<div class="b_room">
 								<div class="booking_room">
 									<div class="reservation">
-										<ul>		
+										<ul>
+											{*}
 											<li  class="span1_of_1 left">
 												 <h5>From</h5>
 												 <div class="book_date">
-													 <form>
+									
 														<input type="text" placeholder="Type Depature City" required="">
-													 </form>
+													 
 												 </div>					
 											 </li>
 											 <li  class="span1_of_1 left">
 												 <h5>To</h5>
 												 <div class="book_date">
-												 <form>
+												
 													<input type="text" placeholder="Type Destination City" required="">
-												 </form>
+												 
 												 </div>		
 											 </li>
+											 {/*}
+											 <form method="post" action="{$basedomain}booking/inputbooking">
 											 <li  class="span1_of_1 left">
-												 <h5>Arrival</h5>
+												 <h5>Check In</h5>
 												 <div class="book_date">
-													 <form>
+													
 													 	{literal}
-													 <input class="date" id="datepicker" type="text" value="2/08/2013" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required=>
+													 <input class="date" name="tanggal_masuk" id="datepicker" type="text" value="2/08/2013" onfocus="this.value = '';" >
 													 {/literal}
-													 </form>
+													 
 												 </div>					
 											 </li>
+											 
 											 <li  class="span1_of_1 left">
-												 <h5>Depature</h5>
+												 <h5>Check Out</h5>
 												 <div class="book_date">
-												 <form>
+												 
 													 	{literal}
-													<input class="date" id="datepicker1" type="text" value="22/08/2013" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '22/08/2013';}" required=>
+													<input class="date" name="tanggal_keluar" id="datepicker1" type="text" value="22/08/2013" onfocus="this.value = '';" >
 
 													 	{/literal}
-												 </form>
+												
 												 </div>		
 											 </li>
 											 <li class="span1_of_1">
-												 <h5>Class</h5>
+												 <h5>Tipe Kamar</h5>
 												 <!----------start section_room----------->
 												 <div class="section_room">
-													  <select id="country" onchange="change_country(this.value)" class="frm-field required">
-															<option value="null">Economy</option>
-															<option value="null">Business</option>         
-															<option value="AX">First Class</option>
-															<option value="AX">Premium Economy</option>
+													  <select id="country" name="tipe_kamar" onchange="change_country(this.value)" class="frm-field required">
+															<option value="1">Economy</option>
+															<option value="2">Business</option>         
+															<option value="3">First Class</option>
+															<option value="4">Premium Economy</option>
 													  </select>
 												 </div>	
 											 </li>
 											 <li class="span1_of_3">
 													<div class="date_btn">
-														<form>
-															<input type="submit" value="Find Flight" />
-														</form>
+														
+															<input type="submit" value="Book Now" />
+														
 													</div>
 											 </li>
+											  </form>
 											 <div class="clearfix"></div>
 										</ul>
 									 </div>
@@ -161,16 +166,20 @@
 				<!-- container -->
 				<div class="container">
 					<div class="visiting-info">
-						<h3>VISITING PLACES</h3>
+						<h3>GALLERY KAMAR</h3>
 					</div>
 					<div class="top-grids">
-						<div class="top-grid">
-							<img src="images/6.jpg" alt="">
-							<div class="top-grid-info visiting-grid">
-								<h3>Vestibulum auctor</h3>
-								<p>Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices .</p>
+						{foreach $data as $vol}
+							<div class="top-grid">
+								<img src="{$basedomain}public_assets/{$vol.filename}" alt="">
+								<div class="top-grid-info visiting-grid">
+									<h3>{$vol.judul}</h3>
+									<p>{$vol.deskripsi}</p>
+								</div>
 							</div>
-						</div>
+						{/foreach}
+						
+						{*}
 						<div class="top-grid">
 							<img src="images/3.jpg" alt="">
 							<div class="top-grid-info visiting-grid">
@@ -192,6 +201,7 @@
 								<p>Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices .</p>
 							</div>
 						</div>
+						{/*}
 						<div class="clearfix"> </div>
 					</div>
 				</div>

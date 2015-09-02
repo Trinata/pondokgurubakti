@@ -1,0 +1,34 @@
+a:5:{s:4:"name";s:17:"Chrysanthemum.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php4122.tmp";s:5:"error";i:0;s:4:"size";i:879394;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('26','ar 1','Foto','4196a58611ab145b2f8523832c5b00de.jpg','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.')
+a:5:{s:4:"name";s:10:"Desert.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpDED8.tmp";s:5:"error";i:0;s:4:"size";i:845941;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('26','ar 2','Foto','84772c5aec75b52bde5389387cc414ac.jpg','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+
+
+
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.')
+a:5:{s:4:"name";s:14:"Hydrangeas.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpAA62.tmp";s:5:"error";i:0;s:4:"size";i:595284;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('25','dd','Foto','96a9405286e878fedf1de427287c7808.jpg','d')
+a:5:{s:4:"name";s:12:"Penguins.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php143C.tmp";s:5:"error";i:0;s:4:"size";i:777835;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('18','kakak','Foto','5cc0683c5e188d3d965f6e801bcb79cb.jpg','mfdjdfkdkfdskfasjfjdsfh')
+a:5:{s:4:"name";s:10:"Tulips.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php7A9E.tmp";s:5:"error";i:0;s:4:"size";i:620888;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('18','sjysjalo','Foto','b1f47fb10ac6ac5368e99e8a0c49faac.jpg','hdfkahsfkh sadfhds')
+a:5:{s:4:"name";s:14:"Hydrangeas.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php8B41.tmp";s:5:"error";i:0;s:4:"size";i:595284;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('18','fhasfhkdfh','Foto','23df934f93ba870bd37c763e3748384b.jpg','dsflasdjfjfasifj')
+a:5:{s:4:"name";s:9:"Koala.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpF952.tmp";s:5:"error";i:0;s:4:"size";i:780831;}
+a:5:{s:4:"name";s:12:"Penguins.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php4477.tmp";s:5:"error";i:0;s:4:"size";i:777835;}

@@ -18,11 +18,22 @@ class home extends Controller {
 	{
         $this->contentHelper = $this->loadModel('contentHelper');
         $this->userHelper = $this->loadModel('userHelper');
+		$this->models=$this->loadModel('modelgallery');
 	}
 	
-	function index(){
+	function index()
+	{
+		//memanggil fungsi getalbum pada model
+		$data=$this->models->getalbum();
+		
+		// pr($data);
+		
+		if ($data){	
+			$this->view->assign('data',$data);
+		}
 		
 		return $this->loadView($folder.'/home');
+		
     }
 
     function logout()

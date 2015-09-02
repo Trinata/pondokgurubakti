@@ -1,0 +1,11 @@
+a:5:{s:4:"name";s:10:"Tulips.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpB055.tmp";s:5:"error";i:0;s:4:"size";i:620888;}
+a:5:{s:4:"name";s:14:"Lighthouse.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php82C2.tmp";s:5:"error";i:0;s:4:"size";i:561276;}
+a:5:{s:4:"name";s:14:"Lighthouse.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpE711.tmp";s:5:"error";i:0;s:4:"size";i:561276;}
+a:5:{s:4:"name";s:9:"Koala.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpEAE9.tmp";s:5:"error";i:0;s:4:"size";i:780831;}
+a:5:{s:4:"name";s:9:"Koala.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php4153.tmp";s:5:"error";i:0;s:4:"size";i:780831;}
+a:5:{s:4:"name";s:9:"Koala.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpA7A5.tmp";s:5:"error";i:0;s:4:"size";i:780831;}
+a:5:{s:4:"name";s:9:"Koala.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php88E0.tmp";s:5:"error";i:0;s:4:"size";i:780831;}
+a:5:{s:4:"name";s:9:"Koala.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php342C.tmp";s:5:"error";i:0;s:4:"size";i:780831;}
+a:5:{s:4:"name";s:10:"Desert.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php21B7.tmp";s:5:"error";i:0;s:4:"size";i:845941;}
+a:5:{s:4:"name";s:10:"Tulips.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php5C38.tmp";s:5:"error";i:0;s:4:"size";i:620888;}
+a:5:{s:4:"name";s:17:"Chrysanthemum.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpA4AD.tmp";s:5:"error";i:0;s:4:"size";i:879394;}

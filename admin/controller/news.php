@@ -10,6 +10,8 @@ var $models = FALSE;
 		$this->view=$this->setSmarty();
 		$sessionAdmin=New Session();
 		$this->admin=$sessionAdmin->get_session();
+		global $app_domain;
+		$this->view->assign('app_domain',$app_domain);
 	}
 
 	public function loadmodule()
@@ -20,9 +22,10 @@ var $models = FALSE;
 	//listnews
 	public function index(){
 		//memanggil fungsi getnews pada model
-		
+		$data = array();
 		$data=$this->models->getnews();
 		// pr($data);
+		// pr($data[0]['judul']);
 		if ($data){	
 			$this->view->assign('data',$data);
 		}
@@ -40,13 +43,13 @@ var $models = FALSE;
 			$tanggal_upload = $_POST['publish'];
 			$upload = uploadFile('gambar',false,'image');
 			// pr($judul);exit;
-			$namafile=$upload['full_name'];
+			$gambar=$upload['full_name'];
 			$status = $_POST['status'];
 			//pr($status);exit;
 			$author = $this->admin['username'];
 			// pr($author);exit;
 			$detail = $_POST['isi'];
-			$data=$this->models->inputnews($judul,$ulasan,$detail,$author,$tanggal_upload,$status);
+			$data=$this->models->inputnews($judul,$ulasan,$gambar,$detail,$author,$tanggal_upload,$status);
 			//kondisi untuk memberi peringatan proses input berhasil atau tidak
 			if($data == 1){
 				echo "<script>alert('Data berhasil di simpan');window.location.href='".$CONFIG['admin']['base_url']."news'</script>";
@@ -92,12 +95,18 @@ var $models = FALSE;
 			$ulasan = $_POST['ulasan'];
 			$tanggal_upload = $_POST['publish'];
 			$status = $_POST['status'];
-			$upload = uploadFile('gambar',false,'image');
+			if ($_FILES['gambar']['name']) {
+				$upload = uploadFile('gambar',false,'image');
+				$gambar=$upload['full_name'];
+			} else {
+				$gambar=$_POST['gambar1'];
+			}
+			
 			// pr($judul);exit;
-			$namafile=$upload['full_name'];
+			
 			$author = $_POST['author'];
 			$detail = $_POST['isi'];
-			$data=$this->models->updatenews($id_news,$judul,$ulasan,$author,$detail,$tanggal_upload,$status);
+			$data=$this->models->updatenews($id_news,$judul,$gambar,$ulasan,$author,$detail,$tanggal_upload,$status);
 			if($data == 1){
 				echo "<script>alert('Data berhasil di perbarui');window.location.href='".$CONFIG['admin']['base_url']."news'</script>";
 			}

@@ -89,8 +89,8 @@
 							<!--Submenu-->
 							<ul class="collapse {if $page.page eq 'course'}in{/if}">
 								<li class="{if $page.page eq 'course' && $page.function eq 'index'}active-link{/if}"><a href="{$basedomain}booking/bookinglist">List Booking</a></li>
-								<li class="{if $page.page eq 'course' && $page.function eq 'courselist'}active-link{/if}"><a href="{$basedomain}booking/add_booking">Add Booking</a></li>
-							{*}	<li class="{if $page.page eq 'quiz' && $page.function eq 'index'}active-link{/if}"><a href="{$basedomain}quiz">Create Quiz</a></li>
+							{*}	<li class="{if $page.page eq 'course' && $page.function eq 'courselist'}active-link{/if}"><a href="{$basedomain}booking/add_booking">Add Booking</a></li>
+								<li class="{if $page.page eq 'quiz' && $page.function eq 'index'}active-link{/if}"><a href="{$basedomain}quiz">Create Quiz</a></li>
 								<li class="{if $page.page eq 'quiz' && $page.function eq 'index'}active-link{/if}"><a href="{$basedomain}quiz/quizlist">List Quiz</a></li>
 								<li class="{if $page.page eq 'course' && $page.function eq 'uploadfile'}active-link{/if}"><a href="{$basedomain}course/uploadfile">Upload Ebook & Video</a></li>{/*}
 							</ul>

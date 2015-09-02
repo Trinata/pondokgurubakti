@@ -3,6 +3,15 @@ class modelgallery extends Database {
 	
 	var $prefix = "api";
 	
+	function getalbum()
+	{
+		//query memanggil data
+		$query = "SELECT * FROM gallery WHERE status in (1) and other_id = 0 and tipe_album = 0";
+		//memanggil semua data. Jika hanya memanggil 1 data ->fetch($query,0,0)
+		$result = $this->fetch($query,1);
+		return $result;
+	}
+	
 	function get_images($albumid=null,$type=1)
 	{
 		$query = "SELECT * FROM {$this->prefix}_news_content_repo WHERE n_status = '1' AND otherid = '{$albumid}' ORDER BY created_date DESC";

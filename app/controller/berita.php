@@ -16,7 +16,7 @@ class berita extends Controller {
 	
 	public function loadmodule()
 	{
-		$this->models=$this->loadModel('mnews');
+		$this->models=$this->loadModel('modelnews');
 	}
 	
 
@@ -24,7 +24,7 @@ class berita extends Controller {
 
 		global $CONFIG;
 		$data=$this->models->getnews();
-		//pr($data);EXIT;
+		// pr($data);
 		if ($data){
 				
 			$this->view->assign('data',$data);

@@ -7,13 +7,18 @@
                     <p>Lombok</p>
                 </div>
                 <div class="top-grids">
+				
+				{foreach $data as $val}
                     <div class="top-grid">
-                        <img src="{$basedomain}assets/images/destinasi/rinjani.jpg" alt="" />
+                        <img src="{$basedomain}public_assets/{$val.filename}" alt="" />
                         <div class="top-grid-info">
-                            <h3>Mount Rinjani</h3>
-                            <p>Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices .</p>
+                            <h3>{$val.judul}</h3>
+                            <p>{$val.deskripsi}</p>
                         </div>
                     </div>
+				{/foreach}	
+					
+					{*}
                     <div class="top-grid">
                         <img src="{$basedomain}assets/images/destinasi/taman.png" alt="" />
                         <div class="top-grid-info">
@@ -35,6 +40,8 @@
                             <p>Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices .</p>
                         </div>
                     </div>
+					{/*}
+					
                     <div class="clearfix"> </div>
                 </div>
             </div>

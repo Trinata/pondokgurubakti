@@ -22,7 +22,7 @@ $(document).ready(function() {
   		</style>	
 
 <div id="page-title">
-	<h1 class="page-header text-overflow">Create News</h1>
+	<h1 class="page-header text-overflow">Create Album</h1>
 
 	<!--Searchbox-->
 	<div class="searchbox">
@@ -41,7 +41,7 @@ $(document).ready(function() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol class="breadcrumb">
 	<li><a href="{$basedomain}">Home</a></li>
-	<li class="active">Add Gallery</li>
+	<li class="active">Add Album</li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--End breadcrumb-->
@@ -55,7 +55,7 @@ $(document).ready(function() {
 	<div class="col-sm-12">
 			<div class="panel">
 				<div class="panel-heading">
-					<h3 class="panel-title">Create Gallery</h3>
+					<h3 class="panel-title">Create Album</h3>
 				</div>
 	
 				<!--Horizontal Form-->
@@ -79,11 +79,21 @@ $(document).ready(function() {
 						</div>
 						
 						<div class="form-group">
-							<label class="col-sm-2 control-label">Cover Gallery</label>
+							<label class="col-sm-2 control-label">Cover Album (max. 2 MB)</label>
+							
 							<div class="col-sm-7">
 								<input type="file" name="cover_gambar">
 							</div>
 						</div>
+						
+						<div class="form-group">
+						<label class="col-sm-2 control-label">Status</label>
+							<div class="col-sm-7">
+								<input type="radio" name="status" value="0" id="status1" > Unpublish &nbsp &nbsp &nbsp
+								<input type="radio" name="status" value="1" id="status1" > Publish
+							</div>
+						</div>
+					
 					</div>
 					<div class="panel-footer text-right">
 						<button class="btn btn-info" type="submit">Save</button>

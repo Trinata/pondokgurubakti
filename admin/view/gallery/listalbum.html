@@ -76,6 +76,7 @@ $(window).on('load', function() {
 					<tr>
 						<th>Album Name</th>
 						<th>Album Cover</th>
+						<th>Status</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -83,9 +84,18 @@ $(window).on('load', function() {
 				{if !empty($data)}
 				{foreach $data as $val}
 			<tr>
-			<td>{$val.judul}</td>
-			<td><img src="{$app_domain}/public_assets/{$val.filename}" width="500" height="300"></td>
-			<td><a id ="demo-dt-delete-btn" class="btn btn-success btn-labeled fa fa-pencil-square-o" href="{$basedomain}gallery/getgallery/?id_album={$val.id_gmb}">View Photo</a></td>
+				<td>{$val.judul}</td>
+				<td><img src="{$app_domain}/public_assets/{$val.filename}" width="500" height="300"></td>
+				<td>{if $val.status==0} <font style="color:red">Unpublish </font> {elseif $val.status==1} <font style="color:blue"> Publish </font>{/if}</td>
+				<td>
+					<table>
+						<tr>
+							<td><a id ="demo-dt-delete-btn" class="btn btn-success btn-labeled fa fa-pencil-square-o" href="{$basedomain}gallery/getgallery/?id_album={$val.id_gmb}">View Photo</a></td>
+							<td><a id ="demo-dt-delete-btn" class="btn btn-success btn-labeled fa fa-pencil-square-o" href="{$basedomain}gallery/editalbum/?id_album={$val.id_gmb}">Edit</a></td>
+							<td><a id ="demo-dt-delete-btn" class="btn btn-danger btn-labeled fa fa-times" href="{$basedomain}gallery/deletealbum/?id_album={$val.id_gmb}">Delete</a></td>
+						</tr>
+					</table>
+				</td>
 			</tr>
 			{/foreach}
 			{/if}
