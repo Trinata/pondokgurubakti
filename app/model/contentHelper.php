@@ -18,10 +18,13 @@ class contentHelper extends Database {
 		$query = "SELECT * FROM gallery WHERE status in (1) and tipe_album = 1 LIMIT 1";
 		//memanggil semua data. Jika hanya memanggil 1 data ->fetch($query,0,0)
 		$result = $this->fetch($query,1);
-		$query1 = "SELECT * FROM gallery WHERE other_id = {$result[0][id_gmb]} and status in (1)";		
-		// pr($result);
-		$result1 = $this->fetch($query1,1);
-		return $result1;
+		if ($result){
+			$query1 = "SELECT * FROM gallery WHERE other_id = {$result[0][id_gmb]} and status in (1)";		
+			// pr($result);
+			$result1 = $this->fetch($query1,1);
+			return $result1;
+		}
+		return false;
 	}
 	
 	function inputbooking($data=array())

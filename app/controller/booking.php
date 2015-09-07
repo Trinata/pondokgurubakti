@@ -22,7 +22,7 @@ class booking extends Controller {
 	
 	function index(){
 		//memanggil fungsi getalbum pada model
-		$data=$this->contentHelper ->getalbum();
+		$data=$this->contentHelper->getalbum();
 		
 		// pr($data);
 		
