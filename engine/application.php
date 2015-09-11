@@ -27,7 +27,7 @@ class Application {
 			$this->configkey = 'services';
 		}
 
-		// pr($DATA);exit;
+		// pr($CONFIG);exit;
 		$this->php_ext = $CONFIG[$this->configkey]['php_ext'];
 		$this->html_ext = $CONFIG[$this->configkey]['html_ext'];
 		$this->page = $DATA[$this->configkey]['page'];

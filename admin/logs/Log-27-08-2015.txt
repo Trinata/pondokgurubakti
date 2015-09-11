@@ -1,0 +1,17 @@
+a:5:{s:4:"name";s:21:"200x380_1-200x380.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpUnHB7k";s:5:"error";i:0;s:4:"size";i:41385;}
+a:5:{s:4:"name";s:21:"200x380_1-200x380.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpRRjZFz";s:5:"error";i:0;s:4:"size";i:41385;}
+a:5:{s:4:"name";s:21:"300x300_1-287x287.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpf3DKT9";s:5:"error";i:0;s:4:"size";i:32867;}
+a:5:{s:4:"name";s:21:"300x300_1-287x287.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpXbiqS2";s:5:"error";i:0;s:4:"size";i:32867;}
+a:5:{s:4:"name";s:21:"300x300_1-287x287.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpvcyGlw";s:5:"error";i:0;s:4:"size";i:32867;}
+a:5:{s:4:"name";s:21:"300x300_1-287x287.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpbNDnoH";s:5:"error";i:0;s:4:"size";i:32867;}
+a:5:{s:4:"name";s:21:"300x300_1-287x287.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/php9sEBAY";s:5:"error";i:0;s:4:"size";i:32867;}
+a:5:{s:4:"name";s:21:"300x300_1-287x287.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpFlqOvU";s:5:"error";i:0;s:4:"size";i:32867;}
+a:5:{s:4:"name";s:21:"300x300_2-287x287.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:14:"/tmp/phps8RnNl";s:5:"error";i:0;s:4:"size";i:46385;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('11','csasa','Foto','a3ed674f3b9210fdf029c76fa481b7ca.png','ccascas')
+a:5:{s:4:"name";s:21:"300x300_1-287x287.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpSINLiI";s:5:"error";i:0;s:4:"size";i:32867;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('3','aaaa','Foto','b559d9b57de3a5e09aa28282cbd7dacd.jpg','csacas')
+a:5:{s:4:"name";s:21:"200x380_2-200x380.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpwfS30Q";s:5:"error";i:0;s:4:"size";i:49749;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi)
+					VALUES('3','sada','Foto','34dcee15f16bbda09ade5c8a89227f66.jpg','dsad')
