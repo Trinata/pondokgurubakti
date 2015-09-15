@@ -46,7 +46,8 @@ class Controller extends Application{
 			// $this->view->assign('menu',$this->menuDinamis());
 		}
 
-		
+		// pr($CONFIG);
+		// pr($this->configkey);exit;
 		if (file_exists($filePath)){
 			
 			if ($DATA[$this->configkey]['page']!=='login'){
