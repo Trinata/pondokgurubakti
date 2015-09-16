@@ -47,12 +47,13 @@ var $models = FALSE;
 		global $CONFIG;
 		$judul = $_POST['judul'];
 		$deskripsi = $_POST['deskripsi'];
+		$tipe_album = $_POST['tipe_album'];
 		$upload = uploadFile('cover_gambar',false,'image');
 		// pr($upload);exit;
 		$filename=$upload['full_name'];
 		$status = $_POST['status'];
 		
-		$data=$this->models->inputalbum($judul, $deskripsi, $filename, $status);		
+		$data=$this->models->inputalbum($judul, $deskripsi, $filename, $status, $tipe_album);		
 		if($data == 1){
 			echo "<script>alert('Data berhasil di simpan');window.location.href='".$CONFIG['admin']['base_url']."gallery'</script>";
 		}
@@ -144,9 +145,10 @@ var $models = FALSE;
 			$upload = uploadFile('gambar',false,'image');
 			// pr($judul);exit;
 			$filename=$upload['full_name'];
+			$tipe_album=$_POST['tipe_album'];
 			$status = $_POST['status'];
 			
-			$data=$this->models->inputgallery($judul,$deskripsi,$filename,$id_gmb,$jns_file,$status);
+			$data=$this->models->inputgallery($judul,$deskripsi,$filename,$id_gmb,$jns_file,$status,$tipe_album);
 			// pr($data);exit;
 			if($data == 1){
 				//pr('Sukses masuk');

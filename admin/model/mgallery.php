@@ -45,11 +45,11 @@ class mgallery extends Database{
 
 	
 //Fungsi untuk menginput data album ke database
-	function inputalbum($judul, $deskripsi, $filename, $status)
+	function inputalbum($judul, $deskripsi, $filename, $status, $tipe_album)
 	{
 		$date = date("Y-m-d H:i:s");
-		$query = "INSERT INTO gallery(judul, deskripsi, filename,date_upload, status)
-					VALUES('".$judul."','".$deskripsi."','".$filename."', '{$date}', '".$status."')";
+		$query = "INSERT INTO gallery(judul, deskripsi, filename,date_upload, status, tipe_album)
+					VALUES('".$judul."','".$deskripsi."','".$filename."', '{$date}', '".$status."', '".$tipe_album."')";
 		$exec = $this->query($query);	
 		//kondisi apabila eksekusi berhasil mengembalikan notif 1, jika gagal mencetak query gagal 
 		if($exec) return 1; else pr('query gagal');
@@ -67,11 +67,11 @@ class mgallery extends Database{
 	}
 
 //Fungsi untuk menginput data album ke database
-	function inputgallery($judul,$deskripsi,$filename,$id_gmb,$jns_file)
+	function inputgallery($judul,$deskripsi,$filename,$id_gmb,$jns_file,$status,$tipe_album)
 	{
 		$date = date("Y-m-d H:i:s");
-		$query = "INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload)
-					VALUES('".$id_gmb."','".$judul."','".$jns_file."','".$filename."','".$deskripsi."','".$status."', '{$date}')";
+		$query = "INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload,tipe_album)
+					VALUES('".$id_gmb."','".$judul."','".$jns_file."','".$filename."','".$deskripsi."','".$status."', '{$date}', '".$tipe_album."')";
 		//eksekusi query
 		logFile($query);
 		$exec = $this->query($query,0);	

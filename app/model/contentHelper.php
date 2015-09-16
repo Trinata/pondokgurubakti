@@ -19,8 +19,9 @@ class contentHelper extends Database {
 		//memanggil semua data. Jika hanya memanggil 1 data ->fetch($query,0,0)
 		$result = $this->fetch($query,1);
 		if ($result){
-			$query1 = "SELECT * FROM gallery WHERE other_id = {$result[0][id_gmb]} and status in (1)";		
-			// pr($result);
+			// $query1 = "SELECT * FROM gallery WHERE other_id = {$result[0][id_gmb]} and status in (1)";	
+			$query1 = "SELECT * FROM gallery WHERE tipe_album = 1 and status in (1) and other_id > 0";				
+			// pr($query1);
 			$result1 = $this->fetch($query1,1);
 			return $result1;
 		}

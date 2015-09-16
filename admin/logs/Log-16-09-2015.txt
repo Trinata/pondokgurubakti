@@ -1,0 +1,21 @@
+a:5:{s:4:"name";s:23:"IMG-20150519-WA0011.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php210C.tmp";s:5:"error";i:0;s:4:"size";i:184529;}
+a:5:{s:4:"name";s:23:"IMG-20150519-WA0007.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpA920.tmp";s:5:"error";i:0;s:4:"size";i:105102;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload)
+					VALUES('38','ini file foto kamar','Foto','9938a574d31bfae6717732cb42d6f910.jpg','x','', '2015-09-16 11:40:18')
+a:5:{s:4:"name";s:10:"Tulips.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php18C4.tmp";s:5:"error";i:0;s:4:"size";i:620888;}
+a:5:{s:4:"name";s:23:"IMG-20150519-WA0005.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpA56B.tmp";s:5:"error";i:0;s:4:"size";i:45973;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload,tipe_album)
+					VALUES('38','foto baru','Foto','8af0e15cb91652e4bfd663524bed5bd4.jpg','ini foto baru','', '2015-09-16 12:25:04', '1')
+a:5:{s:4:"name";s:23:"IMG-20150519-WA0006.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:23:"C:\xampp\tmp\phpB21.tmp";s:5:"error";i:0;s:4:"size";i:79296;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload,tipe_album)
+					VALUES('26','gallery 3','Foto','499d35ad785f38bf38e2def622d67d85.jpg','aaartistikk','1', '2015-09-16 12:47:21', '')
+a:5:{s:4:"name";s:27:"treed-wordybubbles-when.png";s:4:"type";s:9:"image/png";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpCC8D.tmp";s:5:"error";i:0;s:4:"size";i:32644;}
+a:5:{s:4:"name";s:23:"IMG-20150519-WA0004.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php4823.tmp";s:5:"error";i:0;s:4:"size";i:143391;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload,tipe_album)
+					VALUES('43','gallery 123','Foto','0ac18edf9079e9372cf6af8efd5e8a4f.jpg','gambar samping','1', '2015-09-16 12:50:53', '')
+a:5:{s:4:"name";s:23:"IMG-20150519-WA0007.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpBDEF.tmp";s:5:"error";i:0;s:4:"size";i:105102;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload,tipe_album)
+					VALUES('43','gallery cob','Foto','7e8d4396bc80edc1bb1e74c1fe07f843.jpg','view','1', '2015-09-16 13:00:08', '')
+a:5:{s:4:"name";s:23:"IMG-20150519-WA0012.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpDBAD.tmp";s:5:"error";i:0;s:4:"size";i:160684;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload,tipe_album)
+					VALUES('43','vvvvv','Foto','e1d9b73f808d83ebeccd042fbad95acc.jpg','vvvv','1', '2015-09-16 13:01:21', '1')
