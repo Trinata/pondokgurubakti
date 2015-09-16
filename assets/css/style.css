@@ -593,7 +593,7 @@ ul.social-slide li i.mac{
 	margin: .5em 0 0 0;
 }
 .about-banner{
-	background:url(../images/plane.jpg) no-repeat 0px -245px;
+	background:url(../images/desa.jpg) no-repeat 0px -245px;
 	min-height: 400px;
 	position:relative;
 	background-size: cover;
@@ -946,7 +946,7 @@ select option{
 	color: #8c8c8c;
 }
 .news-slid{
-	background: url(../images/12.jpg) no-repeat 0px -157px;
+	background: url(../images/banner2.jpg) no-repeat 0px -157px;
 	min-height: 400px;
 	background-size: cover;
 }
@@ -1226,7 +1226,7 @@ span.menu {
 		margin-top: 2em;
 	}
 	.about-banner {
-		background: url(../images/plane.jpg) no-repeat 0px 0px;
+		background: url(../images/desa.jpg) no-repeat 0px 0px;
 		min-height: 329px;
 		background-size:cover;
 	}
@@ -1345,7 +1345,7 @@ span.menu {
 		min-height: 240px;
 	}
 	.about-banner {
-		background: url(../images/plane.jpg) no-repeat 0px -58px;
+		background: url(../images/desa.jpg) no-repeat 0px -58px;
 		min-height: 240px;
 		background-size: 100%;
 	}
