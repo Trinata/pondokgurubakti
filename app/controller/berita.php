@@ -24,12 +24,14 @@ class berita extends Controller {
 
 		global $CONFIG;
 		$data=$this->models->getnews();
-		// pr($data);
 		if ($data){
-				
+			foreach ($data as $key => $value) {
+				if ($value['tanggal_upload']) $data[$key]['tanggal'] = changeDate($value['tanggal_upload']);
+			}
 			$this->view->assign('data',$data);
 			
-
+		// pr($data);
+			
 		return $this->loadView('berita/page_berita');
 		}
 
