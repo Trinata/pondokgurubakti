@@ -1,3 +1,4 @@
+
 a:5:{s:4:"name";s:23:"IMG-20150519-WA0011.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\php210C.tmp";s:5:"error";i:0;s:4:"size";i:184529;}
 a:5:{s:4:"name";s:23:"IMG-20150519-WA0007.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpA920.tmp";s:5:"error";i:0;s:4:"size";i:105102;}
 INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload)
@@ -19,3 +20,4 @@ INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_uploa
 a:5:{s:4:"name";s:23:"IMG-20150519-WA0012.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:24:"C:\xampp\tmp\phpDBAD.tmp";s:5:"error";i:0;s:4:"size";i:160684;}
 INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload,tipe_album)
 					VALUES('43','vvvvv','Foto','e1d9b73f808d83ebeccd042fbad95acc.jpg','vvvv','1', '2015-09-16 13:01:21', '1')
+
