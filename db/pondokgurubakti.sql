@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2015 at 02:31 PM
+-- Generation Time: Sep 17, 2015 at 06:31 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.5.24
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `jns_file` varchar(20) NOT NULL,
   `other_id` int(11) NOT NULL DEFAULT '0',
   `tipe_album` int(10) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gallery`
@@ -83,9 +83,9 @@ INSERT INTO `gallery` (`id_gmb`, `judul`, `url`, `comment`, `filename`, `date_up
 (23, 'arumzzzzz', '', '', '', '0000-00-00 00:00:00', 0, 2, 'Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsu', '', '', 0, 0),
 (24, 'ocop', '', '', 'eda3f3b86d1ae6293760ed7bd3006a76.jpg', '0000-00-00 00:00:00', 0, 0, 'rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								rer								', '', '', 0, 0),
 (25, 'juice', '', '', '431b033540a1ec0250f45b0542eb1a97.png', '0000-00-00 00:00:00', 0, 1, 'jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			\r\n\r\n\r\njdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			jdkasjdsfjsfjjsdoj			', '', '', 0, 0),
-(26, 'Gallery Kamar', '', '', '04e163e93ae3dd7e3307ed96228ff238.jpg', '0000-00-00 00:00:00', 0, 1, 'Gallery Kamar', '', '', 0, 1),
+(26, 'Gallery Kamar', '', '', '04e163e93ae3dd7e3307ed96228ff238.jpg', '0000-00-00 00:00:00', 0, 2, 'Gallery Kamar', '', '', 0, 1),
 (27, 'ar 1', '', '', '4196a58611ab145b2f8523832c5b00de.jpg', '0000-00-00 00:00:00', 0, 2, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.\r\n\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.\r\n\r\nLorem ipsum dolor sit ', '', 'Foto', 26, 0),
-(28, 'ar 2', '', '', '84772c5aec75b52bde5389387cc414ac.jpg', '0000-00-00 00:00:00', 0, 1, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.\r\n\r\n\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.\r\n\r\n\r\n\r\n\r\nLorem ipsum do', '', 'Foto', 26, 0),
+(28, 'ar 2', '', '', '84772c5aec75b52bde5389387cc414ac.jpg', '0000-00-00 00:00:00', 0, 2, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.\r\n\r\n\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.\r\n\r\n\r\n\r\n\r\nLorem ipsum do', '', 'Foto', 26, 0),
 (29, 'dd', '', '', '96a9405286e878fedf1de427287c7808.jpg', '0000-00-00 00:00:00', 0, 2, 'd', '', 'Foto', 25, 0),
 (30, 'kakak', '', '', '5cc0683c5e188d3d965f6e801bcb79cb.jpg', '0000-00-00 00:00:00', 0, 2, 'mfdjdfkdkfdskfasjfjdsfh', '', 'Foto', 18, 0),
 (31, 'sjysjalo', '', '', 'b1f47fb10ac6ac5368e99e8a0c49faac.jpg', '0000-00-00 00:00:00', 0, 0, 'hdfkahsfkh sadfhds', '', 'Foto', 18, 0),
@@ -93,7 +93,16 @@ INSERT INTO `gallery` (`id_gmb`, `judul`, `url`, `comment`, `filename`, `date_up
 (34, 'mamah', '', '', 'ab9af36c732b3e8b90a58d7ec9349945.jpg', '2015-09-02 13:59:07', 0, 1, 'dubudiiii			', '', '', 0, 0),
 (35, 'arumzzzzz', '', '', '', '2015-09-02 14:39:14', 0, 2, 'Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsu', '', '', 0, 0),
 (36, 'arumzzzzz', '', '', '', '2015-09-02 14:40:06', 0, 2, 'Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices Morbi id felis porttitor tellus viverra pulvinar. Vestibulum ante ipsu', '', '', 0, 0),
-(37, 'AKU', '', '', 'c532d92402ec10a6410a9507ffd2d49b.jpg', '2015-09-02 14:56:14', 0, 0, 'FFFFFF								\r\n								\r\n								', '', '', 0, 0);
+(37, 'AKU', '', '', 'c532d92402ec10a6410a9507ffd2d49b.jpg', '2015-09-02 14:56:14', 0, 0, 'FFFFFF								\r\n								\r\n								', '', '', 0, 0),
+(38, 'X', '', '', '013cca8a912ba111ec2f6a49ecff9f99.jpg', '2015-09-16 11:39:43', 0, 1, 'file X acccess denied		', '', '', 0, 1),
+(39, 'ini file foto kamar', '', '', '9938a574d31bfae6717732cb42d6f910.jpg', '2015-09-16 11:40:18', 0, 2, 'x', '', 'Foto', 38, 0),
+(40, 'zx', '', '', 'e9cee03fe9178448f4aa0e035f0e91f3.jpg', '2015-09-16 11:41:52', 0, 1, '						x		', '', '', 0, 0),
+(41, 'foto baru', '', '', '8af0e15cb91652e4bfd663524bed5bd4.jpg', '2015-09-16 12:25:04', 0, 1, 'ini foto baru', '', 'Foto', 38, 1),
+(42, 'gallery 3', '', '', '499d35ad785f38bf38e2def622d67d85.jpg', '2015-09-16 12:47:21', 0, 1, 'aaartistikk', '', 'Foto', 26, 0),
+(43, 'Gallery Kamar', '', '', '40bdfde1136f99fbe3d0ec612d4d0664.png', '2015-09-16 12:50:22', 0, 1, 'ini adalah khusus gallery kamar', '', '', 0, 1),
+(44, 'gallery 123', '', '', '0ac18edf9079e9372cf6af8efd5e8a4f.jpg', '2015-09-16 12:50:53', 0, 1, 'gambar samping', '', 'Foto', 43, 0),
+(45, 'gallery cob', '', '', '7e8d4396bc80edc1bb1e74c1fe07f843.jpg', '2015-09-16 13:00:08', 0, 1, 'view', '', 'Foto', 43, 0),
+(46, 'vvvvv', '', '', 'e1d9b73f808d83ebeccd042fbad95acc.jpg', '2015-09-16 13:01:21', 0, 0, 'vvvv', '', 'Foto', 43, 1);
 
 -- --------------------------------------------------------
 
@@ -104,8 +113,8 @@ INSERT INTO `gallery` (`id_gmb`, `judul`, `url`, `comment`, `filename`, `date_up
 CREATE TABLE IF NOT EXISTS `news` (
   `id_news` int(10) NOT NULL,
   `judul` varchar(50) NOT NULL,
-  `ulasan` varchar(100) NOT NULL,
-  `detail` varchar(500) NOT NULL,
+  `ulasan` varchar(1000) NOT NULL,
+  `detail` varchar(5000) NOT NULL,
   `tanggal_upload` datetime NOT NULL,
   `author` varchar(20) NOT NULL,
   `gambar` varchar(100) DEFAULT NULL,
@@ -190,7 +199,7 @@ ALTER TABLE `booking`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id_gmb` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
+  MODIFY `id_gmb` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=47;
 --
 -- AUTO_INCREMENT for table `news`
 --
