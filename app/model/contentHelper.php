@@ -28,27 +28,41 @@ class contentHelper extends Database {
 		return false;
 	}
 	
-	function inputbooking($data=array())
+	function inputbooking($datas=array())
 	{
-		$tanggal_masuk = $_SESSION['data_booking']['tanggal_masuk'];
-		$tanggal_keluar = $_SESSION['data_booking']['tanggal_keluar'];
-		$tipe_kamar = $_SESSION['data_booking']['tipe_kamar'];
-		$nama = $data['nama'];
-		$no_telp = $data['telp'];
-		$email = $data['email'];
+		$tanggal_masuk = $datas['tanggal_masuk'];
+		$tanggal_keluar = $datas['tanggal_keluar'];
+		$tipe_kamar = 1;
+		$nama = $datas['nama'];
+		$alamat = $datas['alamat'];
+		$no_telp = $datas['no_telp'];
+		$email = $datas['email'];
+		$kota = $datas['kota'];
+		$provinsi = $datas['provinsi'];
+		$jumlah_kamar = $datas['jumlah_kamar'];
+		$extra_bed = $datas['extra_bed'];
+		$tamu_dewasa = $datas['tamu_dewasa'];
+		$tamu_anak = $datas['tamu_anak'];
 		$date = date("Y-m-d H:i:s");
 		
 		$code_booking = substr(str_shuffle('23456789QWERTYUPLKJHGFDSAZXCVBNM'),0,6);
-		// pr($code_booking);
+		// pr($datas);
 		// exit;
-		$query = "INSERT INTO booking(tanggal_masuk, tanggal_keluar, tipe_kamar,date_book, nama, no_telp, email, code_booking)
-					VALUES('".$tanggal_masuk."','".$tanggal_keluar."','".$tipe_kamar."', '{$date}', '{$nama}', '{$no_telp}', '{$email}', '{$code_booking}')";
+		$query = "INSERT INTO booking(tanggal_masuk, tanggal_keluar, tipe_kamar, date_book, nama, alamat, no_telp, email, code_booking, kota, provinsi, jumlah_kamar, extra_bed, tamu_dewasa, tamu_anak)
+					VALUES('{$tanggal_masuk}', '{$tanggal_keluar}', '{$tipe_kamar}', '{$date}', '{$nama}', '{$alamat}', '{$no_telp}', '{$email}', '{$code_booking}', '{$kota}', '{$provinsi}', '{$jumlah_kamar}', '{$extra_bed}', '{$tamu_dewasa}', '{$tamu_anak}')";
 		$exec = $this->query($query);	
+		// pr($query);
+		// exit;
+		
 		//kondisi apabila eksekusi berhasil mengembalikan notif 1, jika gagal mencetak query gagal 
-		if($exec) return 1; else pr('query gagal');
+		if($exec){
+			$datas['status'] = 1;
+			$datas['code_booking'] = $code_booking;
+			return $datas;
+		} return false;
 	}
 	
-	function detailbooking($id_booking, $nama, $alamat, $no_telp, $email, $extra_bed)
+	function detailbooking($datas)
 	{
 		//query insert data
 		$query = "UPDATE gallery SET nama='".$nama."', alamat='".$alamat."', no_telp='".$no_telp."', email='".$email."', extra_bed='".$extra_bed."' WHERE id_booking = '".$id_booking."' LIMIT 1";

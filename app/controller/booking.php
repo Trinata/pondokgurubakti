@@ -55,27 +55,39 @@ class booking extends Controller {
 	public function detailbooking(){
 		global $CONFIG, $basedomain;
 		
+		
+		
 		if (isset($_POST['submit'])){
 			
-			pr($_SESSION);
 			$nama = $_POST['nama'];
 			$alamat = $_POST['alamat'];
 			$no_telp = $_POST['no_telp'];
 			$email = $_POST['email'];
+			$kota = $_POST['kota'];
+			$provinsi = $_POST['provinsi'];
+			$jumlah_kamar = $_POST['jumlah_kamar'];
 			$extra_bed = $_POST['extra_bed'];
+			$tamu_dewasa = $_POST['tamu_dewasa'];
+			$tamu_anak = $_POST['tamu_anak'];
 			
-			// $upload = uploadFile('cover_gambar',false,'image');
-			// pr($upload);exit;
-			// $filename=$upload['full_name'];
-			
-			// pr($_POST);
-			// exit;
 			$data=$this->contentHelper->inputbooking($_POST);		
-			if($data == 1){
-				echo "<script>alert('Data berhasil di simpan');window.location.href='".$basedomain."booking'</script>";
+			if($data['status'] == 1){
+			
+				$this->view->assign('data',$data);
+				$msg = $this->loadView('emailTemplate');
+				// $send = sendGlobalMail($data['email'], false, $msg);
+				// pr($data);
+				// pr($msg);
+				// exit;
+				if ($send['result']) echo "<script>alert('Data berhasil disimpan, silahkan periksa email anda');window.location.href='".$basedomain."booking'</script>";
 			}
+			
 		}
+		$tanggal_masuk = $_SESSION['data_booking']['tanggal_masuk'];
+		$tanggal_keluar = $_SESSION['data_booking']['tanggal_keluar'];
+		$tipe_kamar = $_SESSION['data_booking']['tipe_kamar'];
 		
+		$this->view->assign('data',$_SESSION['data_booking']);
 		return $this->loadView('booking/detail_booking');
 	}
 	

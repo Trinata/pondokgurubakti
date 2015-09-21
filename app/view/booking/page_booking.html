@@ -4,7 +4,7 @@
 			<!-- container -->
 			<div class="container">
 				<div class="booking-info">
-					<h3>booking kamar</h3>
+					<h3>Gallery</h3>
 				</div>
 				<div class="booking-form">
 					<!---strat-date-piker---->
@@ -14,7 +14,7 @@
 							  <script>
 							  {literal}
 									  $(function() {
-										$( "#datepicker,#datepicker1" ).datepicker();
+										$( "#datepicker,#datepicker1" ).datepicker({ dateFormat: 'yy-mm-dd' }).val();
 									  });
 							{/literal}
 							  </script>
@@ -33,146 +33,31 @@
 						})();
 						{/literal}
 					</script>
-					<div class="online_reservation">
-							<div class="b_room">
-								<div class="booking_room">
-									<div class="reservation">
-										<ul>
-											{*}
-											<li  class="span1_of_1 left">
-												 <h5>From</h5>
-												 <div class="book_date">
-									
-														<input type="text" placeholder="Type Depature City" required="">
-													 
-												 </div>					
-											 </li>
-											 <li  class="span1_of_1 left">
-												 <h5>To</h5>
-												 <div class="book_date">
-												
-													<input type="text" placeholder="Type Destination City" required="">
-												 
-												 </div>		
-											 </li>
-											 {/*}
-											 <form method="post" action="{$basedomain}booking/inputbooking">
-											 <li  class="span1_of_1 left">
-												 <h5>Check In</h5>
-												 <div class="book_date">
-													
-													<input class="date" name="tanggal_masuk" id="datepicker" type="text" value="" >
-													 
-												 </div>					
-											 </li>
-											 
-											 <li  class="span1_of_1 left">
-												 <h5>Check Out</h5>
-												 <div class="book_date">
-												 
-													<input class="date" name="tanggal_keluar" id="datepicker1" type="text" value="" >
-
-												 </div>		
-											 </li>
-											 <li class="span1_of_1">
-												
-												 <h5>Tipe Kamar</h5>
-												 <!---------- start section_room -->
-												 
-												 <div class="section_room">
-													  <select id="country" name="tipe_kamar" onchange="change_country(this.value)" class="frm-field required">
-															<option value="1">Economy</option>
-															{*}<option value="2">Business</option>         
-															<option value="3">First Class</option>
-															<option value="4">Premium Economy</option>{/*}
-													  </select>
-												 </div>	
-											 </li>
-											 <li class="span1_of_3">
-													<div class="date_btn">
-														
-															<input type="submit" value="Book Now" class="btn" />
-														
-													</div>
-											 </li>
-											  </form>
-											 <div class="clearfix"></div>
-										</ul>
-									 </div>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-					</div>
-					<!---->
-				</div>
-				<div class="clearfix"></div>
-				<div class="booking-grids">
-					<h3>WE ARE PROVIDE</h3>
-					<div class="col-md-7 booking-grid-left">
-						<h4>QUISQUE LECTUS IPSUM, FERMENTUM EU SODALES NON, AUCTOR IN MAURIS. NULLA PRETIUM CURSUS NULLA, AC RUTRUM MAGNA LAOREET EU.</h4>
-						<p>Maecenas ultricies molestie efficitur. Maecenas bibendum tincidunt nulla at scelerisque. Fusce sodales nibh ex. Proin vel commodo neque. In congue neque ac venenatis aliquam. Sed vestibulum cursus velit faucibus tempor. Maecenas posuere pellentesque erat, vel auctor mauris fringilla ac. Proin euismod orci nec felis efficitur, a pulvinar nisl viverra. Etiam eu finibus ipsum, id molestie nunc</p>
-						<p>Maecenas ultricies molestie efficitur. Maecenas bibendum tincidunt nulla at scelerisque. Fusce sodales nibh ex. Proin vel commodo neque. In congue neque ac venenatis aliquam.Maecenas bibendum tincidunt nulla at scelerisque.</p>
-						<div class="read-more red">
-							<a href="#">Read More >></a>
-						</div>
-					</div>
-					<div class="col-md-5 booking-grid-right">
-						<img src="images/11.jpg" alt="">
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-			<!-- //container -->
-			<div class="how-to">
+					<div class="visiting">
 				<!-- container -->
 				<div class="container">
-					<div class="how-to-info">
-						<h3>HOW TO BOOK</h3>
-						<h4>Quisque lectus ipsum, fermentum eu sodales non, auctor in mauris. Nulla pretium cursus nulla, ac rutrum magna laoreet eu.
-							Phasellus vel est vel odio finibus lacinia. Donec a diam dictum, elementum ipsum et, pulvina
-						</h4>
-						<p>Duis vulputate auctor libero, eget viverra ante dapibus sit amet. Vestibulum auctor pellentesque enim, 
-						sed ornare metus vehicula eu. Etiam rhoncus eu urna ac feugiat. Praesent sed tempor urna, laoreet dignissim est. 
-						Aenean nec justo vitae arcu consequat lobortis. Sed iaculis et dui eu sollicitudin. Morbi id felis porttitor tellus 
-						viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam cursus 
-						leo nec enim vulputate finibus. Nulla at dui non nisi molestie posuere non sed ante. 
-						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Nulla at dui non nisi molestie posuere non sed ante. </p>
-					</div>
-					<div class="how-grids">
-						<div class="col-md-4 how-grid">
-							<span>1</span>
-							<a href="#">LOREM IPSUM DOLOR SIT</a>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
-						</div>
-						<div class="col-md-4 how-grid">
-							<span>2</span>
-							<a href="#">LOREM IPSUM DOLOR SIT</a>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
-						</div>
-						<div class="col-md-4 how-grid">
-							<span>3</span>
-							<a href="#">LOREM IPSUM DOLOR SIT</a>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<!-- //container -->
-			</div>
-			<div class="visiting">
-				<!-- container -->
-				<div class="container">
-					<div class="visiting-info">
-						<h3>GALLERY KAMAR</h3>
-					</div>
 					<div class="top-grids">
 						{foreach $data as $vol}
 							<div class="top-grid">
-								<img src="{$basedomain}public_assets/{$vol.filename}" alt="">
+								<div style="border:5px solid #aaa">
+									{*}
+									<div style="text-align:center;
+									background-color:red;
+									color:#FFF;
+									border:4px solid #fff;
+									width:30%;
+									padding-top:15px;padding-bottom:15px;float:right;border-radius:50px;margin-bottom:-100px;z-index:999">
+									BOOK<br/> NOW
+									</div>
+									{/*}
+									<img src="{$basedomain}public_assets/{$vol.filename}" alt="" style="z-index:1">
+								</div>
 								<div class="top-grid-info visiting-grid">
 									<h3>{$vol.judul}</h3>
 									<p>{$vol.deskripsi}</p>
 								</div>
+								{*}<a href="javascript:void(0)" class="btn btn-default">IDR 300.000</a>
+								<a href="#" class="btn btn-warning">View Detail</a>{/*}
 							</div>
 						{/foreach}
 						
@@ -204,5 +89,140 @@
 				</div>
 				<!-- //container -->
 			</div>
+					<div class="online_reservation">
+							<div class="b_room">
+								<div class="booking_room">
+									<div class="reservation">
+										<ul>
+											{*}
+											<li  class="span1_of_1 left">
+												 <h5>From</h5>
+												 <div class="book_date">
+									
+													<input type="text" placeholder="Type Depature City" required="">
+													 
+												 </div>					
+											 </li>
+											 <li  class="span1_of_1 left">
+												 <h5>To</h5>
+												 <div class="book_date">
+												
+													<input type="text" placeholder="Type Destination City" required="">
+												 
+												 </div>		
+											 </li>
+											 {/*}
+											 <form method="post" action="{$basedomain}booking/inputbooking">
+											 <li  class="span1_of_1 left">
+												 <h5>Check In</h5>
+												 <div class="book_date">
+													
+													<input class="date" name="tanggal_masuk" id="datepicker" type="text" value="" required>
+													 
+												 </div>					
+											 </li>
+											 
+											 <li  class="span1_of_1 left">
+												 <h5>Check Out</h5>
+												 <div class="book_date">
+												 
+													<input class="date" name="tanggal_keluar" id="datepicker1" type="text" value="" required>
+
+												 </div>		
+											 </li>
+											 <li class="span1_of_1">
+												
+												 <h5>Room Type</h5>
+												 <!---------- start section_room -->
+												 
+												 <div class="section_room">
+													  <select id="country" name="tipe_kamar" onchange="change_country(this.value)" class="frm-field required">
+															<option value="1">Standard (IDR 300.000)</option>
+															{*}<option value="2">Business</option>         
+															<option value="3">First Class</option>
+															<option value="4">Premium Economy</option>{/*}
+													  </select>
+												 </div>	
+											 </li>
+											 <li class="span1_of_3">
+													<div class="date_btn">
+														
+															<input type="submit" value="Book Now" class="btn" name="submit"/>
+														
+													</div>
+											 </li>
+											  </form>
+											 <div class="clearfix"></div>
+										</ul>
+									 </div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+					</div>
+					<!---->
+				</div>
+				<div class="clearfix"></div>
+				{*}
+				<div class="booking-grids">
+					<h3>WE ARE PROVIDE</h3>
+					<div class="col-md-7 booking-grid-left">
+						<h4>QUISQUE LECTUS IPSUM, FERMENTUM EU SODALES NON, AUCTOR IN MAURIS. NULLA PRETIUM CURSUS NULLA, AC RUTRUM MAGNA LAOREET EU.</h4>
+						<p>Maecenas ultricies molestie efficitur. Maecenas bibendum tincidunt nulla at scelerisque. Fusce sodales nibh ex. Proin vel commodo neque. In congue neque ac venenatis aliquam. Sed vestibulum cursus velit faucibus tempor. Maecenas posuere pellentesque erat, vel auctor mauris fringilla ac. Proin euismod orci nec felis efficitur, a pulvinar nisl viverra. Etiam eu finibus ipsum, id molestie nunc</p>
+						<p>Maecenas ultricies molestie efficitur. Maecenas bibendum tincidunt nulla at scelerisque. Fusce sodales nibh ex. Proin vel commodo neque. In congue neque ac venenatis aliquam.Maecenas bibendum tincidunt nulla at scelerisque.</p>
+						<div class="read-more red">
+							<a href="#">Read More >></a>
+						</div>
+					</div>
+					<div class="col-md-5 booking-grid-right">
+						<img src="images/11.jpg" alt="">
+					</div>
+					<div class="clearfix"> </div>
+				</div>{/*}
+			</div>
+			<!-- //container -->
+			<div class="how-to">
+				<!-- container -->
+				<div class="container">
+					<div class="how-to-info">
+						<h3>HOW TO BOOK</h3>
+						{*}
+						<h4>
+						</h4>
+						<p>Duis vulputate auctor libero, eget viverra ante dapibus sit amet. Vestibulum auctor pellentesque enim, 
+						sed ornare metus vehicula eu. Etiam rhoncus eu urna ac feugiat. Praesent sed tempor urna, laoreet dignissim est. 
+						Aenean nec justo vitae arcu consequat lobortis. Sed iaculis et dui eu sollicitudin. Morbi id felis porttitor tellus 
+						viverra pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam cursus 
+						leo nec enim vulputate finibus. Nulla at dui non nisi molestie posuere non sed ante. 
+						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Nulla at dui non nisi molestie posuere non sed ante. </p>
+					</div>
+					{/*}
+					<div class="how-grids">
+						<div class="col-md-4 how-grid">
+							<span>1</span>
+							<a href="#">BOOK ROOM</a>
+							<p>Setelah memastikan tanggal kedatangan, segera booking kamar Pondok Guru Bakti dengan memilih tanggal pada Menu "CHECK IN" dan "CHECK OUT". Pilih "BOOK NOW" untuk melakukan validasi data Anda pada menu berikutnya.
+								Booking kamar dapat dilakukan melalui telepon kami pada menu "Contact".
+							</p>
+						</div>
+						<div class="col-md-4 how-grid">
+							<span>2</span>
+							<a href="#">VALIDATE YOUR DATA</a>
+							<p>Input data diri Anda dengan benar pada menu berikutnya. Berikan data diri yang lengkap dan jelas untuk mempermudah Pondok Guru Bakti mengindentifikasi Anda saat kedatangan.
+								Lakukan konfirmasi dan selesaikan pembayaran Anda ke Pondok Guru Bakti. 
+							</p>
+						</div>
+						<div class="col-md-4 how-grid">
+							<span>3</span>
+							<a href="#">GO TO PONDOK GURU BAKTI</a>
+							<p>Setelah menuju Pondok Guru Bakti, segera menuju resepsionis untuk reservasi. Staf Pondok Guru Bakti akan membantu melayani Anda dan mengantar Anda menuju kamar hotel.
+								Jangan segan untuk bertanya mengenai destinasi terdekat dan rencanakan perjalanan Anda dengan baik.
+							</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<!-- //container -->
+			</div>
+			
 		</div>
 		<!-- booking -->
