@@ -55,31 +55,74 @@ class booking extends Controller {
 	public function detailbooking(){
 		global $CONFIG, $basedomain;
 		
+		
+		
 		if (isset($_POST['submit'])){
 			
-			pr($_SESSION);
 			$nama = $_POST['nama'];
 			$alamat = $_POST['alamat'];
 			$no_telp = $_POST['no_telp'];
 			$email = $_POST['email'];
+			$kota = $_POST['kota'];
+			$provinsi = $_POST['provinsi'];
+			$jumlah_kamar = $_POST['jumlah_kamar'];
 			$extra_bed = $_POST['extra_bed'];
+			$tamu_dewasa = $_POST['tamu_dewasa'];
+			$tamu_anak = $_POST['tamu_anak'];
 			
-			// $upload = uploadFile('cover_gambar',false,'image');
-			// pr($upload);exit;
-			// $filename=$upload['full_name'];
-			
-			// pr($_POST);
-			// exit;
 			$data=$this->contentHelper->inputbooking($_POST);		
-			if($data == 1){
-				echo "<script>alert('Data berhasil di simpan');window.location.href='".$basedomain."booking'</script>";
+			if($data['status'] == 1){
+			
+				$this->view->assign('data',$data);
+				$msg = $this->loadView('emailTemplate');
+				// $send = sendGlobalMail($data['email'], false, $msg);
+				// pr($data);
+				// pr($msg);
+				// exit;
+				if ($send['result']) echo "<script>alert('Data berhasil disimpan, silahkan periksa email anda');window.location.href='".$basedomain."booking'</script>";
 			}
+			
 		}
+		$tanggal_masuk = $_SESSION['data_booking']['tanggal_masuk'];
+		$tanggal_keluar = $_SESSION['data_booking']['tanggal_keluar'];
+		$tipe_kamar = $_SESSION['data_booking']['tipe_kamar'];
 		
+		$date1 = new DateTime($tanggal_masuk);
+		$date2 = new DateTime($tanggal_keluar);
+
+		$diff = $date2->diff($date1)->format("%a");
+		$jumlahbook = 300000 * $diff;
+		$this->view->assign('jumlahhari',$diff);
+		$this->view->assign('jumlahbook',number_format($jumlahbook));
+		$this->view->assign('data',$_SESSION['data_booking']);
 		return $this->loadView('booking/detail_booking');
 	}
 	
-	
+	function ajax()
+	{
+
+		$tanggal_masuk = _p('tanggal_masuk');
+		$tanggal_keluar = _p('tanggal_keluar');
+
+		$currentDate = date('Y-m-d');
+		if ($tanggal_masuk >= $currentDate){
+			
+			if ($tanggal_keluar >= $tanggal_masuk){
+				$date1 = new DateTime($tanggal_masuk);
+				$date2 = new DateTime($tanggal_keluar);
+
+				$diff = $date2->diff($date1)->format("%a");
+				if ($diff > 0) print json_encode(array('status'=>true, 'res'=>$diff));
+				else print json_encode(array('status'=>false));
+			}else{
+				print json_encode(array('status'=>false));
+			}
+		}else{
+			print json_encode(array('status'=>false));
+		}
+		
+		exit;
+	}
 }
 
 ?>

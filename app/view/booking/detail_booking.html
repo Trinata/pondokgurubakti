@@ -1,60 +1,155 @@
+
+<link rel="stylesheet" href="{$basedomain}assets/css/jquery-ui.css" />
+<script src="{$basedomain}assets/js/jquery-ui.js"></script>
+<script>
+{literal}
+	$(function() {
+	
+		$( "#datepicker,#datepicker1" ).datepicker({ dateFormat: 'yy-mm-dd' }).val();
+	});
+	
+	$(document).on("keyup", ".telp", (function () {
+		this.value = this.value.replace(/[^0-9\.]/g,'');
+	}));
+{/literal}
+</script>
+
+
 <div class="container">
+	<h3>DATA VALIDATION </h3>
 	<div class="news-grids">
 		<form method="post" action="">
 		<div class="col-md-6">
-			
+		<div class="portlet-content">
+			<div class="col-md-12">
 				<div class="form-group">
-					<label for="email">Nama :</label>
-					<input type="email" class="form-control" id="email">
+					<label for="Nama">Nama :</label>
+					<input type="text" class="form-control" id="Nama" name="nama" required>
 				</div>
+			</div>
+			<div class="col-md-12">
 				<div class="form-group">
 					<label for="email">Email :</label>
-					<input type="email" class="form-control" id="email">
+					<input type="email" class="form-control" name="email" required>
 				</div>
+			</div>
+			<div class="col-md-12">
 				<div class="form-group">
-					<label for="email">Alamat :</label>
-					<input type="email" class="form-control" id="email">
+					<label for="Alamat">Alamat :</label>
+					<input type="text" class="form-control" id="Alamat" name="alamat" required>
 				</div>
-				<div class="form-group">
-					<label for="email">Kota:</label>
-					<input type="email" class="form-control" id="email">
-				</div>
-				<div class="form-group">
-					<label for="email">Provinsi:</label>
-					<input type="email" class="form-control" id="email">
-				</div>
-				<div class="form-group">
-					<label for="email">No telp:</label>
-					<input type="email" class="form-control" id="email">
-				</div>
+			</div>
 			
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="Kota">Kota :</label>
+					<input type="text" class="form-control" id="Kota" name="kota" required>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="Provinsi">Provinsi :</label>
+					<select id="country" name="provinsi" class="form-control" required>
+						<option value="1">1</option>
+						<option value="2">2</option>         
+						<option value="3">3</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<label for="telp">No telp :</label>
+					<input type="text" class="form-control telp" id="telp" name="no_telp" required>
+				</div>
+			</div>
+		</div>
 		</div>
 		<div class="col-md-6">
-			
+		<div class="portlet-content">
+			<div class="col-md-6">	
 				<div class="form-group">
-					<label for="email">Check in:</label>
-					<input type="email" class="form-control" id="datepicker">
+					<label for="">Check In :</label>
+					<input type="text" class="form-control" id="datepicker" value="{$data.tanggal_masuk}" name="tanggal_masuk" required>
 				</div>
+			</div>
+			<div class="col-md-6">
 				<div class="form-group">
-					<label for="email">Check Out:</label>
-					<input type="email" class="form-control" id="datepicker">
+					<label for="">Check Out :</label>
+					<input type="text" class="form-control" id="datepicker1" value="{$data.tanggal_keluar}" name="tanggal_keluar" required>
 				</div>
+			</div>
+			<div class="col-md-6">
 				<div class="form-group">
-					<label for="email">Jumlah Tamu:</label>
-					<input type="email" class="form-control" id="email">
+					<label for="email">Jumlah Kamar :</label>
+					<select id="country" name="jumlah_kamar" class="form-control" required>
+						<option value="1">1</option>
+						<option value="2">2</option>         
+						<option value="3">3</option>
+					</select>
 				</div>
+			</div>
+			<div class="col-md-6">
 				<div class="form-group">
-					<label for="email">Tipe kamar:</label>
-					<input type="email" class="form-control" id="email">
+					<label for="email">Extra Bed :</label>
+					<select id="country" name="extra_bed" class="form-control" required>
+						<option value="1">1</option>
+						<option value="2">2</option>         
+						<option value="3">3</option>
+					</select>
 				</div>
+			</div>
+			<div class="col-md-6">
 				<div class="form-group">
-					<label for="email">Jumlah Kamar:</label>
-					<input type="email" class="form-control" id="email">
+					<label for="email">Tamu Dewasa :</label>
+					<select id="country" name="tamu_dewasa" class="form-control" required>
+						<option value="1">1</option>
+						<option value="2">2</option>         
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>         
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
 				</div>
+			</div>
+			<div class="col-md-6">
 				<div class="form-group">
-					<button type="submit" class="btn btn-info">Submit</button>
+					<label for="email">Tamu Anak :</label>
+					<select id="country" name="tamu_anak" class="form-control" required>
+						<option value="1">1</option>
+						<option value="2">2</option>         
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>         
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
 				</div>
-			
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<label for="tipe_kamar">Tipe Kamar :</label>
+					<input type="email" class="form-control" id="tipe_kamar" value="{if $data.tipe_kamar == 1}Standard (IDR 300.000){/if}" name="tipe_kamar" disabled>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<label for="tipe_kamar">Total Bayar :</label>
+					<input type="text" class="form-control" id="tipe_kamar" value="IDR {$jumlahbook} - ({$jumlahhari} Hari)" name="tipe_kamar" disabled>
+				</div>
+			</div>
+			<div class="col-md-12">	
+				<div class="form-group">
+					<button type="submit" class="btn btn-info" name="submit">Submit</button>
+				</div>
+			</div>
+		</div>
 		</div>
 		</form>
 	</div>
