@@ -55,7 +55,8 @@ class booking extends Controller {
 	public function detailbooking(){
 		global $CONFIG, $basedomain;
 		
-		
+		$getProvinsi=$this->contentHelper->getProvinsi();
+		$this->view->assign('prov',$getProvinsi);
 		
 		if (isset($_POST['submit'])){
 			
@@ -70,16 +71,28 @@ class booking extends Controller {
 			$tamu_dewasa = $_POST['tamu_dewasa'];
 			$tamu_anak = $_POST['tamu_anak'];
 			
-			$data=$this->contentHelper->inputbooking($_POST);		
+			$data=$this->contentHelper->inputbooking($_POST);
+			// pr($data);		
 			if($data['status'] == 1){
-			
+				
+				foreach ($data as $key => $value) {
+					
+					if ($key == 'tanggal_masuk') $data['tanggalMasuk'] = changeDate($value);
+					if ($key == 'tanggal_keluar') $data['tanggalKeluar'] = changeDate($value);
+					
+				}
+				$date1 = new DateTime($data['tanggal_masuk']);
+				$date2 = new DateTime($data['tanggal_keluar']);
+
+				$diff = $date2->diff($date1)->format("%a");
+				$data['total'] = number_format($diff * 300000);
 				$this->view->assign('data',$data);
 				$msg = $this->loadView('emailTemplate');
-				// $send = sendGlobalMail($data['email'], false, $msg);
+				$send = sendGlobalMail($data['email'], false, $msg);
 				// pr($data);
 				// pr($msg);
 				// exit;
-				if ($send['result']) echo "<script>alert('Data berhasil disimpan, silahkan periksa email anda');window.location.href='".$basedomain."booking'</script>";
+				echo "<script>alert('Data berhasil disimpan, silahkan periksa email anda');window.location.href='".$basedomain."booking'</script>";
 			}
 			
 		}
@@ -123,6 +136,8 @@ class booking extends Controller {
 		
 		exit;
 	}
+
+
 }
 
 ?>

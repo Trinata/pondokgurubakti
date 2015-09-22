@@ -48,7 +48,7 @@ class contentHelper extends Database {
 		$code_booking = substr(str_shuffle('23456789QWERTYUPLKJHGFDSAZXCVBNM'),0,6);
 		// pr($datas);
 		// exit;
-		$query = "INSERT INTO booking(tanggal_masuk, tanggal_keluar, tipe_kamar, date_book, nama, alamat, no_telp, email, code_booking, kota, provinsi, jumlah_kamar, extra_bed, tamu_dewasa, tamu_anak)
+		$query = "INSERT IGNORE INTO booking(tanggal_masuk, tanggal_keluar, tipe_kamar, date_book, nama, alamat, no_telp, email, code_booking, kota, provinsi, jumlah_kamar, extra_bed, tamu_dewasa, tamu_anak)
 					VALUES('{$tanggal_masuk}', '{$tanggal_keluar}', '{$tipe_kamar}', '{$date}', '{$nama}', '{$alamat}', '{$no_telp}', '{$email}', '{$code_booking}', '{$kota}', '{$provinsi}', '{$jumlah_kamar}', '{$extra_bed}', '{$tamu_dewasa}', '{$tamu_anak}')";
 		$exec = $this->query($query);	
 		// pr($query);
@@ -103,6 +103,19 @@ class contentHelper extends Database {
                 'field'=>"*",
                 'condition' => "{$n_status} {$type} {$filter} {$orderby}",
                 'limit' => '100',
+                );
+
+        $res = $this->lazyQuery($sql,$debug);
+        if ($res) return $res;
+        return false;
+    }
+
+    function getProvinsi($debug=false)
+    {
+    	$sql = array(
+                'table'=>"tbl_wilayah",
+                'field'=>"*",
+                'condition' => "parent = 0",
                 );
 
         $res = $this->lazyQuery($sql,$debug);

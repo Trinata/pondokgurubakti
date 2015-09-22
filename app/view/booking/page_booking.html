@@ -230,21 +230,52 @@
 <script type="text/javascript">
 	{literal}
 
+	var exists;
+
+	function set_exists(x){
+	    exists = x;
+	}
+
 	function validateDate()
 	{
+
 		var tanggal_masuk = $('.tanggal_masuk').val();
 		var tanggal_keluar = $('.tanggal_keluar').val();
+		var salah = "";
 
-		$.post(basedomain+'booking/ajax', {tanggal_masuk:tanggal_masuk, tanggal_keluar:tanggal_keluar}, function(data){
+
+		var myVariable;
+
+			$.ajax({
+			    'async': false,
+			    'type': "POST",
+			    'global': false,
+			    'dataType': 'html',
+			    'url': basedomain+'booking/ajax',
+			    'data': { 'tanggal_masuk': tanggal_masuk, 'tanggal_keluar': tanggal_keluar},
+			    'success': function (data) {
+			        
+		        	myVariable = data;
+			    }
+			},"JSON");
+
+		
+		/*
+		var postdata = $.post(basedomain+'booking/ajax', {tanggal_masuk:tanggal_masuk, tanggal_keluar:tanggal_keluar}, function(data){
 			if (data.res==true){
 				// nothing todo
 			}else{
 				alert('Mohon periksa tanggal booking anda');
-				return false;
+				return data;
 			}
-		},"JSON")
+		},"JSON");
+		*/
 
-		
+		var dataJson = JSON.parse(myVariable);
+		if (dataJson.status == false){
+			alert('Mohon periksa tanggal booking anda');
+			return false;	
+		} 
 	}
 
 	{/literal}
