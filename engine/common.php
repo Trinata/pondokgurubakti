@@ -625,7 +625,7 @@ function sendGlobalMail($to,$from,$msg,$config=true){
 	
 	if (!$config){
 
-		@mail($to,"[ NOTIFICATION ] Flora Kalbar",$msg,"From: $from\n");
+		@mail($to,$CONFIG['email']['EMAIL_SUBJECT'],$msg,"From: $from\n");
 
 		return array('message'=>'success send mail','result'=>true);
 
@@ -642,18 +642,22 @@ function sendGlobalMail($to,$from,$msg,$config=true){
 	try {
 		logFile('ready to send mail');
 		$mail->Host       = $CONFIG['email']['EMAIL_SMTP_HOST']; // SMTP server
-		$mail->SMTPDebug  = 1;                     // enables SMTP debug information (for testing)
+		$mail->SMTPDebug  = 2;                     // enables SMTP debug information (for testing)
 		$mail->SMTPAuth   = true;                  // enable SMTP authentication
-		$mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
-		$mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
-		$mail->Port       = 465;                   // set the SMTP port for the GMAIL server
+		// $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
+		$mail->Host       = $CONFIG['email']['EMAIL_SMTP_HOST'];      // sets GMAIL as the SMTP server smtp.gmail.com
+		$mail->Port       = $CONFIG['email']['EMAIL_SMTP_POST'];                   // set the SMTP port for the GMAIL server 465
 		$mail->Username   = $CONFIG['email']['EMAIL_FROM_DEFAULT'];  // GMAIL username
 		$mail->Password   = $CONFIG['email']['EMAIL_SMTP_PASSWORD'];            // GMAIL password
+		logFile('add address');
 		$mail->AddAddress($to);
+		logFile('set from');
 		$mail->SetFrom($CONFIG['email']['EMAIL_FROM_DEFAULT'], 'No Reply Account');
-		$mail->Subject = "[ NOTIFICATION ] Flora Kalbar";
+		$mail->Subject = $CONFIG['email']['EMAIL_SUBJECT'];
 		$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!'; // optional - MsgHTML will create an alternate automatically
+		logFile('set message');
 		$mail->MsgHTML($msg);
+		logFile('prepare send mail');
 		$result = $mail->Send();
 		
 		logFile('status send = '.$result);

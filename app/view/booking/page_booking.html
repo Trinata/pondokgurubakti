@@ -34,12 +34,14 @@
 						{/literal}
 					</script>
 					<div class="visiting">
-				<!-- container -->
+				<!-- container -->	
 				<div class="container">
+
+					
 					<div class="top-grids">
 						{foreach $data as $vol}
 							<div class="top-grid">
-								<div style="border:5px solid #aaa">
+								<div class="recent-work-wrap" style="">
 									{*}
 									<div style="text-align:center;
 									background-color:red;
@@ -50,7 +52,16 @@
 									BOOK<br/> NOW
 									</div>
 									{/*}
-									<img src="{$basedomain}public_assets/{$vol.filename}" alt="" style="z-index:1">
+									<img class="img-responsive" src="{$basedomain}public_assets/{$vol.filename}" >
+									<div class="overlay">
+			                            <div class="recent-work-inner">
+			                                 {if $vol.filename}
+			                                <a class="preview" href="{$basedomain}public_assets/{$vol.filename}" rel="prettyPhoto"><img src="{$basedomain}assets/images/loop.png"/> </a>
+			                                {else}
+			                                      <a class="preview" href="#"><img src="{$basedomain}assets/images/loop.png"/> </a>
+			                                {/if}
+			                            </div> 
+			                        </div>
 								</div>
 								<div class="top-grid-info visiting-grid">
 									<h3>{$vol.judul}</h3>

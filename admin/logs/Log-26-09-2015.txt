@@ -1,0 +1,7 @@
+a:5:{s:4:"name";s:19:"traveling-image.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpNCmOC2";s:5:"error";i:0;s:4:"size";i:609243;}
+a:5:{s:4:"name";s:21:"200x380_2-200x380.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/php8DrRIc";s:5:"error";i:0;s:4:"size";i:49749;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload,tipe_album)
+					VALUES('16','aaa','Foto','61af8ffcbc6b5ca5b5b90b39df82239d.jpg','aa','1', '2015-09-26 10:40:44', '1')
+a:5:{s:4:"name";s:32:"IMG_20150516_153316_compress.jpg";s:4:"type";s:10:"image/jpeg";s:8:"tmp_name";s:14:"/tmp/phpiTn6p4";s:5:"error";i:0;s:4:"size";i:108852;}
+INSERT INTO gallery(other_id,judul,jns_file,filename,deskripsi,status,date_upload,tipe_album)
+					VALUES('16','bbb','Foto','cbc5073977b244d080ce24d829040ea2.jpg','','1', '2015-09-26 13:44:39', '1')
