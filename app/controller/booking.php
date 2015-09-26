@@ -92,7 +92,7 @@ class booking extends Controller {
 				// pr($data);
 				// pr($msg);
 				// exit;
-				echo "<script>alert('Data berhasil disimpan, silahkan periksa email anda');window.location.href='".$basedomain."booking'</script>";
+				// echo "<script>alert('Data berhasil disimpan, silahkan periksa email anda');window.location.href='".$basedomain."booking'</script>";
 			}
 			
 		}
