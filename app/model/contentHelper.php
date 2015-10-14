@@ -122,5 +122,17 @@ class contentHelper extends Database {
         if ($res) return $res;
         return false;
     }
+	
+	function inputkontak($nama, $email, $subject, $message, $status)
+	{
+		$date = date("Y-m-d H:i:s");
+		$query = "INSERT INTO userkontak (nama, email, subject, message, status, date)
+					VALUES('".$nama."','".$email."','".$subject."','".$message."','".$status."','".$date."')";
+		//eksekusi query
+		logFile($query);
+		$exec = $this->query($query,0);	
+		//kondisi apabila eksekusi berhasil mengembalikan notif 1, jika gagal mencetak query gagal 
+		if($exec) return 1; else pr('query gagal');
+	}
 }
 ?>
