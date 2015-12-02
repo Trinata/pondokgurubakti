@@ -67,7 +67,7 @@ var $models = FALSE;
 			//kondisi apabila tidak melakukan perubahan
 			if ($_POST == null){	
 				$data=$this->models->selectalbum($id_gmb);
-				// pr($data);
+				//	pr($data);
 				if ($data){	
 					$this->view->assign('data',$data);
 				}	
@@ -80,8 +80,8 @@ var $models = FALSE;
 				$status = $_POST['status'];
 				
 				// pr($_FILES);
-				// pr($_POST);
-				// EXIT;
+				//pr($_POST);
+				//EXIT;
 				if ($_FILES['cover_gambar']['name']) {
 					$upload = uploadFile('cover_gambar',false,'image');
 					$filename=$upload['full_name'];
